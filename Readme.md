@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
-* Студент: [Михаил](https://up.htmlacademy.ru/htmlcss/26/user/952335).
-* Наставник: `Андрей Островский`.
+* Студент: [Михаил Колесниченко](https://up.htmlacademy.ru/htmlcss/26/user/952335).
+* Наставник: [Андрей Островский](https://htmlacademy.ru/profile/id198062).
 
 ---
 
