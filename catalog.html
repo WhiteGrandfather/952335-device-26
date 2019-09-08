@@ -7,12 +7,13 @@
 
   <body>
 
-    <header class="header">
+    <header class="main-header">
+
       <a href="inex.html" class="logo">
         <img src="img/logo.png" width="163" height="35" alt="Логотип магазина Device">
       </a>
       <input type="text" value="Поиск по сайту" class="header-search">
-      <ul class="header-interaction-block">
+      <ul class="user-block">
         <li>
           <a href="login.html">Войти</a>
         </li>
@@ -23,8 +24,8 @@
           <a href="cart.html">Корзина</a>
         </li>
       </ul>
-      <nav class="header-navigation">
-        <ul class="navigation-block">
+      <nav class="main-nav">
+        <ul class="main-nav-list">
           <li>
             <a href="catalog.html">Каталог товаров</a>
           </li>
@@ -42,16 +43,16 @@
     </header>
 
     <main>
-      <h1>Моноподы для селфи</h1>
+      <h1 class="main-title">Моноподы для селфи</h1>
 
-      <ul class="bread-crumbs">
+      <ul class="breadcrumbs">
         <li>
           <a href="index.html">Главная</a>
         </li>
         <li>
           <a href="catalog.html">Каталог товаров</a>
         </li>
-        <li>Моноподы для селфи</li>
+        <li class="main-title">Моноподы для селфи</li>
       </ul>
 
       <div class="sort">
@@ -85,36 +86,28 @@
 
         <ul class="products-list">
           <li>
-            <a href="catalog-item-1.html">
-              <img src="img/item-1.jpg" alt="Любительская селфи-палка">
-            </a>
+            <img src="img/item-1.jpg" alt="Любительская селфи-палка">
             <button type="button">В корзину</button>
             <button type="button">Добавить к сравнению</button>
             <a href="catalog-item-1.html">Любительская селфи-палка</a>
             <span>500 руб.</span>
           </li>
           <li>
-            <a href="catalog-item-2.html">
-              <img src="img/item-2.jpg" alt="Профессиональная селфи-палка">
-            </a>
+            <img src="img/item-2.jpg" alt="Профессиональная селфи-палка">
             <button type="button">В корзину</button>
             <button type="button">Добавить к сравнению</button>
             <a href="catalog-item-2.html">Профессиональная селфи-палка</a>
             <span>1500 руб.</span>
           </li>
           <li>
-            <a href="catalog-item-3.html">
-              <img src="img/item-3.jpg" alt="Непотопляемая селфи-палка">
-            </a>
+            <img src="img/item-3.jpg" alt="Непотопляемая селфи-палка">
             <button type="button">В корзину</button>
             <button type="button">Добавить к сравнению</button>
             <a href="catalog-item-3.html">Непотопляемая селфи-палка</a>
             <span>2500 руб.</span>
           </li>
           <li>
-            <a href="catalog-item-4.html">
               <img src="img/item-4.jpg" alt="Селфи-палка «Следуй за мной»">
-            </a>
             <button type="button">В корзину</button>
             <button type="button">Добавить к сравнению</button>
             <a href="catalog-item-4.html">Селфи-палка «Следуй за мной»</a>
@@ -123,7 +116,7 @@
         </ul>
       </section>
 
-      <ul class="page-navigation">
+      <ul class="pagination">
         <li>
           <a href="">Назад</a>
         </li>
@@ -144,10 +137,10 @@
     <footer class="footer">
 
       <div class="footer-top">
-        <a href="index.html">
+        <a href="index.html" class="footer-logo">
           <img src="img/logo.png" width="163" height="35" alt="Логотип магазина Device">
         </a>
-        <ul>
+        <ul class="footer-user-block">
           <li>
             <a href="login.html">Войти</a>
           </li>
@@ -161,8 +154,8 @@
       </div>
 
       <div class="footer-middle">
-        <ul>
-          <li>г. Москва, ул. Строителей, 15</li>
+        <p class="footer-address">г. Москва, ул. Строителей, 15</p>
+        <ul class="footer-nav"> 
           <li>
             <a href="delivery.html">Доставка</a>
           </li>
@@ -172,14 +165,12 @@
           <li>
             <a href="info.html">Контакты</a>
           </li>
-          <li>
-            <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
-          </li>
         </ul>
+        <a href="tel:+74954959595" class="footer-phone">Тел.: +7 (495) 495-95-95</a>
       </div>
 
       <div class="footer-bottom">
-        <ul>
+        <ul class="footer-social">
           <li>
             <a href="fb.com">
               <img src="img/ФБ.svg" alt="Фейсбук">
@@ -198,13 +189,11 @@
               Твиттер
             </a>
           </li>
-          <li>
-            <a href="https://htmlacademy.ru/intensive/htmlcss">
+        </ul>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy-logo">
               <img src="img/logo-html.svg" alt="HTML Academy">
               HTML Academy
-            </a>
-          </li>
-        </ul>
+        </a>
       </div>
     </footer>
 
