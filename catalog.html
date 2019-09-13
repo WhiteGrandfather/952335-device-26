@@ -77,6 +77,7 @@
 
       <div class="sort">
         <h2>Сортировка:</h2>
+
         <ul class="sort-list">
           <li>
             <a href="">По цене</a>
@@ -98,11 +99,52 @@
 
       <section class="filter-form">
         <h2>Фильтр:</h2>
-        <!--Сдесь будет форма-->
+
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <p>
+            Стоимость
+            <!--Сдесь будет двойной слайдер JS-->
+          </p>
+          <p>
+            Цвет
+            <label>
+              <input type="checkbox" name="color-black" checked>
+              Черный
+            </label>
+            <label>
+              <input type="checkbox" name="color-white">
+              Белый
+            </label>
+            <label>
+              <input type="checkbox" name="color-blue">
+              Синий
+            </label>
+            <label>
+            <input type="checkbox" name="color-red" checked>
+            Красный
+            </label>
+            <label>
+              <input type="checkbox" name="color-pink" checked>
+              Розовый
+            </label>
+          </p>
+          <p>
+            Bluetooth
+            <label>
+              <input type="radio" name="bluetooth-hev" checked>
+              Есть
+            </label>
+            <label>
+              <input type="radio" name="bluetooth-no">
+              Нет
+            </label>
+          </p>
+          <button type="submit">Показать</button>
+        </form>
       </section>
 
       <section class="products">
-        <h2 class="visualy-hidden">Список товаров</h2>
+        <h2 class="visually-hidden">Список товаров</h2>
 
         <ul class="products-list">
           <li>
@@ -137,6 +179,7 @@
       </section>
 
       <ul class="pagination">
+        <h2 class="visually-hidden">Пагинация</h2>
         <li>
           <a href="">Назад</a>
         </li>
