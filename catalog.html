@@ -101,46 +101,71 @@
         <h2>Фильтр:</h2>
 
         <form action="https://echo.htmlacademy.ru" method="get">
-          <p>
-            Стоимость
+
+          <fieldset class="cost">
+            <h3>Стоимость</h3>
             <!--Сдесь будет двойной слайдер JS-->
-          </p>
-          <p>
-            Цвет
-            <label>
-              <input type="checkbox" name="color-black" checked>
-              Черный
-            </label>
-            <label>
-              <input type="checkbox" name="color-white">
-              Белый
-            </label>
-            <label>
-              <input type="checkbox" name="color-blue">
-              Синий
-            </label>
-            <label>
-            <input type="checkbox" name="color-red" checked>
-            Красный
-            </label>
-            <label>
-              <input type="checkbox" name="color-pink" checked>
-              Розовый
-            </label>
-          </p>
-          <p>
-            Bluetooth
-            <label>
-              <input type="radio" name="bluetooth-hev" checked>
-              Есть
-            </label>
-            <label>
-              <input type="radio" name="bluetooth-no">
-              Нет
-            </label>
-          </p>
+          </fieldset>
+
+          <fieldset class="color">
+            <h3>Цвет</h3>
+
+            <ul class="color-checkbox">
+              <li>
+                <input type="checkbox" name="color-black" id="color-black" checked>
+                <label for="color-black">
+                  Черный
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="color-white"  id="color-white">
+                <label for="color-white">
+                  Белый
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="color-blue"  id="color-blue">
+                <label for="color-blue">
+                  Синий
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="color-red"  id="color-red" checked>
+                <label for="color-red">
+                  Красный
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="color-pink"  id="color-pink"     checked>
+                <label for="color-pink">
+                  Розовый
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="Bluetooth">
+            <h3>Bluetooth</h3>
+
+            <ul class="Bluetooth-radio">
+              <li>
+                <input type="radio" name="bluetooth-hev"  id="bluetooth-hev"   checked>
+                <label for="bluetooth-hev">
+                  Есть
+                </label>
+              </li>
+              <li>
+                <input type="radio" name="bluetooth-no" id="bluetooth-no">
+                <label for="bluetooth-no">
+                  Нет
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
           <button type="submit">Показать</button>
         </form>
+
       </section>
 
       <section class="products">
