@@ -12,7 +12,11 @@
       <a href="inex.html" class="logo">
         <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
       </a>
-      <input type="text" value="Поиск по сайту" class="header-search">
+
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <input type="text" value="Поиск по сайту" class="header-search">
+      </form>
+
       <ul class="user-block">
         <li>
           <a href="">Войти</a>
@@ -103,62 +107,48 @@
         <form action="https://echo.htmlacademy.ru" method="get">
 
           <fieldset class="cost">
-            <h3>Стоимость</h3>
+            <legend>Стоимость</legend>
             <!--Сдесь будет двойной слайдер JS-->
           </fieldset>
 
           <fieldset class="color">
-            <h3>Цвет</h3>
+            <legend>Цвет</legend>
 
             <ul class="color-checkbox">
               <li>
                 <input type="checkbox" name="color-checkbox" value="black" id="color-black" checked>
-                <label for="color-black">
-                  Черный
-                </label>
+                <label for="color-black">Черный</label>
               </li>
               <li>
-                <input type="checkbox" name="color-checkbox" value="blue" id="color-white">
-                <label for="color-white">
-                  Белый
-                </label>
+                <input type="checkbox" name="color-checkbox" value="white" id="color-white">
+                <label for="color-white">Белый</label>
               </li>
               <li>
                 <input type="checkbox" name="color-checkbox" value="blue" id="color-blue">
-                <label for="color-blue">
-                  Синий
-                </label>
+                <label for="color-blue">Синий</label>
               </li>
               <li>
                 <input type="checkbox" name="color-checkbox" value="red" id="color-red" checked>
-                <label for="color-red">
-                  Красный
-                </label>
+                <label for="color-red">Красный</label>
               </li>
               <li>
                 <input type="checkbox" name="color-checkbox" value="pink" id="color-pink"     checked>
-                <label for="color-pink">
-                  Розовый
-                </label>
+                <label for="color-pink">Розовый</label>
               </li>
             </ul>
           </fieldset>
 
           <fieldset class="Bluetooth">
-            <h3>Bluetooth</h3>
+            <legend>Bluetooth</legend>
 
             <ul class="Bluetooth-radio">
               <li>
                 <input type="radio" name="radio-bluetooth" value="hev" id="bluetooth-hev"   checked>
-                <label for="bluetooth-hev">
-                  Есть
-                </label>
+                <label for="bluetooth-hev">Есть</label>
               </li>
               <li>
                 <input type="radio" name="radio-bluetooth" value="no" id="bluetooth-no">
-                <label for="bluetooth-no">
-                  Нет
-                </label>
+                <label for="bluetooth-no">Нет</label>
               </li>
             </ul>
           </fieldset>
@@ -202,8 +192,8 @@
           </li>
         </ul>
       </section>
-      <h2 class="visually-hidden">Пагинация</h2>
-      <ul class="pagination">        
+
+      <ul class="pagination">
         <li>
           <a href="">Назад</a>
         </li>
@@ -259,24 +249,16 @@
       <div class="footer-bottom">
         <ul class="footer-social">
           <li>
-            <a href="fb.com">
-              Фейсбук
-            </a>
+            <a href="fb.com">Фейсбук</a>
           </li>
           <li>
-            <a href="Instagram.com">
-              Инстаграм
-            </a>
+            <a href="Instagram.com">Инстаграм</a>
           </li>
           <li>
-            <a href="twitter.com">
-              Твиттер
-            </a>
+            <a href="twitter.com">Твиттер</a>
           </li>
         </ul>
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy-logo">
-              HTML Academy
-        </a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy-logo">HTML Academy</a>
       </div>
     </footer>
 
