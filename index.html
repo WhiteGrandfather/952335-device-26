@@ -3,23 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
 
     <header class="main-header">
 
-      <a class="logo">
         <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
-      </a>
       
-      <form action="https://echo.htmlacademy.ru" method="get">
-        <label for="header-search">Поиск</label>
+      <form action="https://echo.htmlacademy.ru" method="get" class="search">
+        <label for="header-search" class="visually-hidden">Поиск</label>
         <input type="search" name="search" placeholder="Поиск по сайту" id="header-search">
         <button type="submit" >Найти</button>
       </form>
 
-      <ul class="user-block">
+      <ul class="user-block list">
         <li>
           <a href="">Войти</a>
         </li>
@@ -31,11 +32,11 @@
         </li>
       </ul>
 
-      <nav class="main-nav">
-        <ul class="main-nav-list">
+      <nav class="main-navigation">
+        <ul class="header-navigation list">
           <li>
             <a href="catalog.html">Каталог товаров</a>
-            <ul class="add-nav-list">
+            <ul class="add-navigation list">
               <li>
                 <a href="">Виртуальная реальность</a>
               </li>
@@ -77,10 +78,10 @@
       <section class="slider">
           <h2 class="visually-hidden">Популярное</h2>
 
-          <ul class="slider-list">
+          <ul class="slider list">
             <li>
-              <a><img src="img/slider-1.png" width="384" height="486" alt="Фото селфи палки"></a>
-              <p>
+              <img src="img/slider-1.png" width="384" height="486" alt="Фото селфи палки">
+              <p class="slider-title">
                 Делай селфи,<br>
                 как Бен Стиллер!
               </p>
@@ -88,7 +89,7 @@
                 Самая длинная палка для селфи доступна в нашем магазине.
                 Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.              
               </p>
-              <a href="">Подробнее</a>
+              <a href="" class="button">Подробнее</a>
               <table class="slider-table">
                 <tr>
                   <td>8,5 м</td>
@@ -103,8 +104,8 @@
               </table>
             </li>
             <li>
-              <a><img src="img/slider-2.png" width="345" height="485" alt="Фото селфи палки">Селфи палка</a>
-              <p>
+              <img src="img/slider-2.png" width="345" height="485" alt="Фото селфи палки">
+              <p class="slider-title">
                   Худеем<br>
                   правильно!
               </p>
@@ -112,7 +113,7 @@
                   Мотивирующие фитнес-браслеты помогут найти в себе силы
                   не пропускать занятия и соблюдать диету. 
               </p>
-              <a href="">Подробнее</a>
+              <a href="" class="button">Подробнее</a>
               <table class="slider-table">
                 <tr>
                   <td>48 часов</td>
@@ -123,16 +124,16 @@
               </table> 
             </li>
             <li>
-              <a><img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер"></a>
-              <p>
-                  Порхает как бабочка,
+              <img src="img/slider-3.png" width="526" height="334" alt="Квадрокоптер">
+              <p class="slider-title">
+                  Порхает как бабочка,<br>
                   жалит как пчела!
               </p>
               <p>
-                  тот обычный, на первый взгляд, квадрокоптер оснащен
+                  Этот обычный, на первый взгляд, квадрокоптер оснащен
                   мощным лазером, замаскированным под стандартную камеру.
               </p>
-              <a href="">Подробнее</a>
+              <a href="" class="button">Подробнее</a>
               <table class="slider-table">
                 <tr>
                   <td>800 м</td>
@@ -147,9 +148,9 @@
           </ul>
        </section> 
 
-      <section class="catalog">
+      <section class="directory">
           <h2 class="visually-hidden">Каталог</h2>
-          <ul class="catalog-list">
+          <ul class="directory-list list">
             <li>
               <a href="">
                 <img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
@@ -192,19 +193,19 @@
       <section class="service">
         <h2 class="visually-hidden">Услуги</h2>
 
-        <ul class="service-buttons">
+        <ul class="service-buttons list">
           <li>
-            <button type="button">Доставка</button>
+            <button>Доставка</button>
           </li>
           <li>
-            <button type="button">Гарантия</button>
+            <button>Гарантия</button>
           </li>
           <li>
-            <button type="button">Кредит</button>
+            <button>Кредит</button>
           </li>
         </ul>
 
-        <ul class="service-popup">
+        <ul class="service-popup list">
           <li>
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
@@ -226,7 +227,7 @@
 
       <section class="partners">
         <h2 class="visually-hidden">Наши пaртнеры</h2>
-        <ul>
+        <ul class="list">
           <li>
             <a href="">
               <img src="img/logo-1.png" width="260" height="100" alt="DJI">
@@ -255,22 +256,22 @@
 
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-        <ul>
+        <ul class="list">
           <li>Деловые Линии</li>
           <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспресс</li>
+          <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a href="">Подробнее о нас</a>
+        <a href="" class="button">Подробнее о нас</a>
       </section>
 
       <section class="info-block">
         <h2>Контакты</h2>
 
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <a href="" class="">
+        <a href="">
           <img src="img/map.png" width="560" height="222" alt="Офис компании по адресу ул. Строителей 15, г. Москва">
         </a>
-        <a href="">Напишите нам</a>
+        <a href="" class="button">Напишите нам</a>
       </section>
 
     </main>
@@ -278,9 +279,14 @@
     <footer class="footer">
 
       <div class="footer-top">
-          <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
+        <!--
+        <object type="image/svg+xml" data="img/logo.svg" class="logo">
+          Логотип магазина Device 
+        </object>
+        -->
+        <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device" > 
         
-        <ul class="footer-user-block">
+        <ul class="footer-user-block list">
           <li>
             <a href="">Войти</a>
           </li>
@@ -295,7 +301,7 @@
 
       <div class="footer-middle">
         <p class="footer-address">г. Москва, ул. Строителей, 15</p>
-        <ul class="footer-nav"> 
+        <ul class="footer-navigation list"> 
           <li>
             <a href="">Доставка</a>
           </li>
@@ -310,7 +316,7 @@
       </div>
 
       <div class="footer-bottom">
-        <ul class="footer-social">
+        <ul class="footer-social list">
           <li>
             <a href="fb.com">Фейсбук</a>
           </li>
@@ -321,13 +327,14 @@
             <a href="twitter.com">Твиттер</a>
           </li>
         </ul>
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy-logo">HTML Academy</a>
+        <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy-logo">
+          <span><!-- <span class="visually-hidden"> -->HTML Academy</span></a>
       </div>
     </footer>
 
     <section class="write-us-popup">
       <h2 class="visually-hidden">Напишите нам</h2>
-        <form action="https://echo.htmlacademy.ru" method="post">
+        <form action="https://echo.htmlacademy.ru" method="post" class="write-us-form">
           <p>
             <label for="write-us-name">Ваше имя:</label>
             <input type="text" name="login" placeholder="Имя Фамилия" id="write-us-name">
@@ -340,7 +347,7 @@
             <label for="write-us-text">Текст письма:</label>
             <textarea name="textarea" rows="7" placeholder="В свободной форме" id="write-us-text"></textarea>
           </p>
-          <button type="submit">Отправить</button>
+          <button type="submit" class="button">Отправить</button>
         </form>
       <button type="button" class="button-close">Закрыть</button>
     </section>
