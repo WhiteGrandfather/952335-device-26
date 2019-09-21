@@ -3,23 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-
   <body>
-
     <header class="main-header">
-
+      <a class="logo">
         <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
-      
-      <form action="https://echo.htmlacademy.ru" method="get" class="search">
-        <label for="header-search" class="visually-hidden">Поиск</label>
-        <input type="search" name="search" placeholder="Поиск по сайту" id="header-search">
-        <button type="submit" >Найти</button>
+      </a>
+      <form class="search" action="https://echo.htmlacademy.ru" method="get">
+        <label class="visually-hidden" for="header-search">Поиск</label>
+        <input class="serch-form" type="search" name="search" placeholder="Поиск по сайту" id="header-search">
+        <button class="serch-button" type="submit" >Найти</button>
       </form>
-
       <ul class="user-block list">
         <li>
           <a href="">Войти</a>
@@ -31,7 +27,6 @@
           <a href="">Корзина</a>
         </li>
       </ul>
-
       <nav class="main-navigation">
         <ul class="header-navigation list">
           <li>
@@ -68,16 +63,11 @@
           </li>
         </ul>
       </nav>
-
     </header>
-
     <main>
-
       <h1 class="visually-hidden">Магазин Device</h1>
-
       <section class="slider">
           <h2 class="visually-hidden">Популярное</h2>
-
           <ul class="slider list">
             <li>
               <img src="img/slider-1.png" width="384" height="486" alt="Фото селфи палки">
@@ -87,9 +77,9 @@
               </p>
               <p>
                 Самая длинная палка для селфи доступна в нашем магазине.
-                Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.              
+                Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
               </p>
-              <a href="" class="button">Подробнее</a>
+              <a class="button" href="">Подробнее</a>
               <table class="slider-table">
                 <tr>
                   <td>8,5 м</td>
@@ -113,7 +103,7 @@
                   Мотивирующие фитнес-браслеты помогут найти в себе силы
                   не пропускать занятия и соблюдать диету. 
               </p>
-              <a href="" class="button">Подробнее</a>
+              <a class="button" href="">Подробнее</a>
               <table class="slider-table">
                 <tr>
                   <td>48 часов</td>
@@ -133,7 +123,7 @@
                   Этот обычный, на первый взгляд, квадрокоптер оснащен
                   мощным лазером, замаскированным под стандартную камеру.
               </p>
-              <a href="" class="button">Подробнее</a>
+              <a class="button" href="">Подробнее</a>
               <table class="slider-table">
                 <tr>
                   <td>800 м</td>
@@ -146,8 +136,7 @@
               </table> 
             </li>
           </ul>
-       </section> 
-
+       </section>
       <section class="directory">
           <h2 class="visually-hidden">Каталог</h2>
           <ul class="directory-list list">
@@ -189,10 +178,8 @@
             </li>
           </ul>
         </section>
-
       <section class="service">
         <h2 class="visually-hidden">Услуги</h2>
-
         <ul class="service-buttons list">
           <li>
             <button>Доставка</button>
@@ -204,7 +191,6 @@
             <button>Кредит</button>
           </li>
         </ul>
-
         <ul class="service-popup list">
           <li>
               <h3>Доставка</h3>
@@ -224,7 +210,6 @@
           </li>
         </ul>
       </section>
-
       <section class="partners">
         <h2 class="visually-hidden">Наши пaртнеры</h2>
         <ul class="list">
@@ -250,10 +235,8 @@
           </li>
         </ul>
       </section>
-
       <section class="about-us">
         <h2>О нас</h2>
-
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
         <ul class="list">
@@ -261,31 +244,27 @@
           <li>Автотрейдинг</li>
           <li>ЖелДорЭкспедиция</li>
         </ul>
-        <a href="" class="button">Подробнее о нас</a>
+        <a class="button" href="">Подробнее о нас</a>
       </section>
-
       <section class="info-block">
         <h2>Контакты</h2>
-
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <a href="">
           <img src="img/map.png" width="560" height="222" alt="Офис компании по адресу ул. Строителей 15, г. Москва">
         </a>
-        <a href="" class="button">Напишите нам</a>
+        <a class="button" href="">Напишите нам</a>
       </section>
-
     </main>
-
     <footer class="footer">
-
       <div class="footer-top">
-        <!--
-        <object type="image/svg+xml" data="img/logo.svg" class="logo">
-          Логотип магазина Device 
-        </object>
-        -->
-        <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device" > 
-        
+        <a class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="164" height="35" viewBox="0 0 164 35">
+              <path 
+              d="m0.35 0.7v33.6h13.532a15.723 15.723 0 0 0 11.72-4.824 16.464 16.464 0 0 0 4.712-11.976 16.465 16.465 0 0 0-4.712-11.976 15.723 15.723 0 0 0-11.72-4.824zm7.733 26.208v-18.819h5.8a8.648 8.648 0 0 1 6.5 2.568 9.412 9.412 0 0 1 2.489 6.84 9.41 9.41 0 0 1-2.489 6.84 8.646 8.646 0 0 1-6.5 2.568h-5.8zm34.8-5.952h12.082v-7.3h-12.086v-5.567h13.291v-7.389h-21.024v33.6h21.265v-7.392h-13.532v-5.952zm36.343 13.344 11.019-33.6h-8.458l-7.491 24.72-7.491-24.72h-8.457l11.019 33.6zm14.4 0h7.733v-33.6h-7.733zm38.615-1.416a15.514 15.514 0 0 0 6.041-5.688l-6.67-3.84a7.488 7.488 0 0 1-3.165 3.024 9.874 9.874 0 0 1-4.664 1.1 9.594 9.594 0 0 1-7.177-2.736 9.907 9.907 0 0 1-2.682-7.248 9.908 9.908 0 0 1 2.682-7.248 9.594 9.594 0 0 1 7.177-2.736 9.914 9.914 0 0 1 4.64 1.08 7.6 7.6 0 0 1 3.189 3.048l6.67-3.84a15.881 15.881 0 0 0-6.09-5.688 17.419 17.419 0 0 0-8.409-2.088 17.12 17.12 0 0 0-17.592 17.472 17.12 17.12 0 0 0 17.589 17.476 17.519 17.519 0 0 0 8.458-2.088zm17.881-11.928h12.082v-7.3h-12.085v-5.567h13.29v-7.389h-21.022v33.6h21.264v-7.392h-13.532v-5.952z"
+              />
+            </svg>
+            <span class="visually-hidden">Логотип магазина Device</span>
+        </a>
         <ul class="footer-user-block list">
           <li>
             <a href="">Войти</a>
@@ -298,7 +277,6 @@
           </li>
         </ul>
       </div>
-
       <div class="footer-middle">
         <p class="footer-address">г. Москва, ул. Строителей, 15</p>
         <ul class="footer-navigation list"> 
@@ -312,9 +290,8 @@
             <a href="">Контакты</a>
           </li>
         </ul>
-        <a href="tel:+74954959595" class="footer-phone">Тел.: +7 (495) 495-95-95</a>
+        <a class="footer-phone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
       </div>
-
       <div class="footer-bottom">
         <ul class="footer-social list">
           <li>
@@ -327,14 +304,13 @@
             <a href="twitter.com">Твиттер</a>
           </li>
         </ul>
-        <a href="https://htmlacademy.ru/intensive/htmlcss" class="htmlacademy-logo">
+        <a class="htmlacademy-logo" href="https://htmlacademy.ru/intensive/htmlcss">
           <span><!-- <span class="visually-hidden"> -->HTML Academy</span></a>
       </div>
     </footer>
-
     <section class="write-us-popup">
       <h2 class="visually-hidden">Напишите нам</h2>
-        <form action="https://echo.htmlacademy.ru" method="post" class="write-us-form">
+        <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
           <p>
             <label for="write-us-name">Ваше имя:</label>
             <input type="text" name="login" placeholder="Имя Фамилия" id="write-us-name">
@@ -347,18 +323,14 @@
             <label for="write-us-text">Текст письма:</label>
             <textarea name="textarea" rows="7" placeholder="В свободной форме" id="write-us-text"></textarea>
           </p>
-          <button type="submit" class="button">Отправить</button>
+          <button class="button" type="submit">Отправить</button>
         </form>
-      <button type="button" class="button-close">Закрыть</button>
+      <button class="button-close" type="button">Закрыть</button>
     </section>
-
     <section class="map-popup">
       <h2 class="visually-hidden">Карта проезда</h2>
-
       <img src="img/map-big.png" width="960" height="559" alt="Офис компании по адресу ул. Строителей 15, г. Москва">
-      <button type="button" class="button-close">Закрыть</button>
+      <button class="button-close" type="button">Закрыть</button>
     </section>
-
-  </body>
-  
+  </body>  
 </html>

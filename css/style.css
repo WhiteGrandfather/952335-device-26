@@ -1,15 +1,33 @@
 /* Шрифты */
 
 @font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/opensans.woff2") format("woff2"),
+  url("/fonts/opensans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/fonts/opensanslight.woff2") format("woff2"),
+  url("/fonts/opensanslight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Gilroy";
-  src: url("/fonts/gilroyextrabold.woff2") format("woff2"), url("/fonts/gilroyextrabold.woff") format("woff");
+  src: url("/fonts/gilroyextrabold.woff2") format("woff2"),
+  url("/fonts/gilroyextrabold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/gilroylight.woff2") format("woff2"), url("/fonts/gilroylight.woff") format("woff");
+  src: url("/fonts/gilroylight.woff2") format("woff2"),
+  url("/fonts/gilroylight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -29,10 +47,6 @@ body {
   background-color: #ffffff;
 }
 
-body.index-catalog {
-  color: #000000;
-}
-
 a {
   text-decoration: none;
 }
@@ -47,9 +61,7 @@ a {
   color: #000000;
 
   background-color: transparent;
-
   border: none;
-
   outline: 0;
 }
 
@@ -65,6 +77,7 @@ a {
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
@@ -76,106 +89,119 @@ a {
 
 /* Логотип в хедере */
 
-.main-header img:hover,
-.main-header img:focus {
+a.logo:hover,
+a.logo:focus {
   opacity: 0.6;
+  outline: 0;
 }
 
-.main-header img:active {
+a.logo:active {
   opacity: 0.3;
 }
 
 /* Форма поиска */
 
-.main-header input {
+.serch-form {
   background-color: transparent;
-
   border: none;
 }
 
-
-.main-header input:focus {
+.serch-form:focus {
   outline: 0;
 }
 
-.main-header input::-webkit-input-placeholder { /* Chrome */
+.serch-form::-webkit-input-placeholder {
   color: #000000;
-  opacity: 0.3;
-}
-.main-header input:-ms-input-placeholder { /* IE 10+ */
-  color: #000000;
-  opacity: 0.3;
-}
-.main-header input::-moz-placeholder { /* Firefox 19+ */
-  color: #000000;
-  opacity: 0.3;
-}
-.main-header input:-moz-placeholder { /* Firefox 4 - 18 */
-  color: #000000;
+
   opacity: 0.3;
 }
 
-.main-header input:hover::-webkit-input-placeholder { /* Chrome */
+.serch-form:-ms-input-placeholder {
   color: #000000;
-  opacity: 0.6;
+
+  opacity: 0.3;
 }
-.main-header input:hover:-ms-input-placeholder { /* IE 10+ */
+
+.serch-form::-moz-placeholder {
   color: #000000;
-  opacity: 0.6;
+
+  opacity: 0.3;
 }
-.main-header input:hover::-moz-placeholder { /* Firefox 19+ */
+
+.serch-form:-moz-placeholder {
   color: #000000;
-  opacity: 0.6;
+
+  opacity: 0.3;
 }
-.main-header input:hover:-moz-placeholder { /* Firefox 4 - 18 */
+
+.serch-form:hover::-webkit-input-placeholder {
   color: #000000;
+
   opacity: 0.6;
 }
 
-.main-header input:focus::-webkit-input-placeholder { /* Chrome */
+.serch-form:hover:-ms-input-placeholder {
   color: #000000;
-  opacity: 1;
-  outline:0
+
+  opacity: 0.6;
 }
-.main-header input:focus:-ms-input-placeholder { /* IE 10+ */
+
+.serch-form:hover::-moz-placeholder {
   color: #000000;
-  opacity: 1;
+
+  opacity: 0.6;
 }
-.main-header input:focus::-moz-placeholder { /* Firefox 19+ */
+
+.serch-form:hover:-moz-placeholder {
   color: #000000;
-  opacity: 1;
+
+  opacity: 0.6;
 }
-.main-header input:focus:-moz-placeholder { /* Firefox 4 - 18 */
+
+.serch-form:focus::-webkit-input-placeholder {
   color: #000000;
+
   opacity: 1;
 }
 
-.main-header button {
+.serch-form:focus:-ms-input-placeholder {
+  color: #000000;
+
+  opacity: 1;
+}
+
+.serch-form:focus::-moz-placeholder {
+  color: #000000;
+
+  opacity: 1;
+}
+
+.serch-form:focus:-moz-placeholder {
+  color: #000000;
+
+  opacity: 1;
+}
+
+.serch-button {
   font: inherit;
 
   border: 2px solid #000000;
-
   background-color: transparent;
   outline: 0;
-
 }
 
-.main-header button:hover {
+.serch-button:hover,
+.serch-button:focus {
   font: inherit;
   color: #ffffff;
 
   border: 2px solid #000000;
-
   background-color: #000000;
 }
 
-.main-header button:active {
+.serch-button:active {
   font: inherit;
   color: rgba(255, 255, 255, 0.3);
-
-  border: 2px solid #000000;
-
-  background-color: #000000;
 }
 
 /* Хедер*/
@@ -195,8 +221,7 @@ a {
 }
 
 .add-navigation a,
-.user-block a {
-  font-family: "Open Sans", Arial, sans-serif;
+.user-block a {  
   font-weight: 300;
   letter-spacing: normal;
   color: #464646;
@@ -280,9 +305,7 @@ a {
   text-transform: uppercase;
 
   background-color: transparent;
-
   border: none;
-
   outline: 0;
 }
 
@@ -335,6 +358,13 @@ a {
   color: #000000;
 }
 
+/*Доступность карты?
+
+.info-block a {
+  outline: 0;
+}
+*/
+
 /* Футер */
 
 .footer {
@@ -351,27 +381,9 @@ a {
 
 /* Футер верхний блок*/
 
-/* Логотип в футере
-
-object в HTML - отключен цвет SVG не меняется :( 
-
 .footer-top .logo {
-  width: 163px;
-  height: 35px;
-  background-image: url(logo.png);
-
-  fill: #f0c52e;
+  fill: #ffc600;
 }
-
-.footer-top .logo:hover,
-.footer-top .logo:focus {
-  opacity: 0.6;
-}
-
-.footer-top .logo:active {
-  opacity: 0.3;
-}
-*/
 
 .footer-top img:hover,
 .footer-top img:focus {
@@ -445,7 +457,6 @@ object в HTML - отключен цвет SVG не меняется :(
 .write-us-form {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
-  font-size: 18;
   line-height: 24px;
   color: #000000;
 }
@@ -456,26 +467,23 @@ object в HTML - отключен цвет SVG не меняется :(
   line-height: 18px;
 
   background-color: #f2f2f2;
-
   border: none;
-
   outline: 0;
 }
 
 .write-us-form input::-webkit-input-placeholder,
-.write-us-form textarea::-webkit-input-placeholder { /* Chrome */
-  opacity: 0.4;
+.write-us-form textarea::-webkit-input-placeholder {
 }
 .write-us-form input:-ms-input-placeholder,
-.write-us-form textarea:-ms-input-placeholder { /* IE 10+ */
+.write-us-form textarea:-ms-input-placeholder {
   opacity: 0.4;
 }
 .write-us-form input::-moz-placeholder,
-.write-us-form textarea::-moz-placeholder { /* Firefox 19+ */
+.write-us-form textarea::-moz-placeholder {
   opacity: 0.4;
 }
 .write-us-form input:-moz-placeholder,
-.write-us-form textarea:-moz-placeholder { /* Firefox 4 - 18 */
+.write-us-form textarea:-moz-placeholder {
   opacity: 0.4;
 }
 
@@ -487,7 +495,6 @@ object в HTML - отключен цвет SVG не меняется :(
 .write-us-form input:focus,
 .write-us-form textarea:focus {
   background-color: transparent;
-
   border: 2px solid #f7e296;
 }
 
@@ -505,16 +512,13 @@ object в HTML - отключен цвет SVG не меняется :(
   color: #000000;
 
   background-color: transparent;
-
-  border: none;
-  
+  border: none;  
   outline: 0;
 }
 
 .form-submission a:hover,
 .form-submission a:focus {
   background-color: #f0c52e;
-
 }
 
 .form-submission a:active {
@@ -535,10 +539,13 @@ object в HTML - отключен цвет SVG не меняется :(
 .breadcrumbs {
   font-size: 14px;
   line-height: 24px;
-  color: rgba(0, 0, 0, 0.3);  
+  color: rgba(0, 0, 0, 0.3);
+
+  outline: 0;
 }
 
-.breadcrumbs a:hover {
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -563,6 +570,8 @@ object в HTML - отключен цвет SVG не меняется :(
   font-size: 14px;
   line-height: 24px;
   color: rgba(0, 0, 0, 0.3);
+
+  outline: 0;
 }
 
 .sort-list a:hover,
@@ -576,9 +585,12 @@ object в HTML - отключен цвет SVG не меняется :(
 
 /* Фильтр */
 
-.filter-form h2 {
+.filter-form {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
+}
+
+.filter-form h2 {
   font-size: 16;
   line-height: 24px;
   letter-spacing: 5px;
@@ -587,11 +599,13 @@ object в HTML - отключен цвет SVG не меняется :(
 }
 
 .fieldset-header {
-  font-family: Gilroy, Arial, sans-serif;
-  font-weight: 800;
   font-size: 16;
   line-height: 24px;
   color: #000000;
+}
+
+.filter-form input{
+  outline: 0;
 }
 
 .filter-form input:disabled {
@@ -622,9 +636,7 @@ object в HTML - отключен цвет SVG не меняется :(
   color: rgba(0, 0, 0, 0.5);
 
   background-color: transparent;
-
   border: none;
-
   outline: 0;
 }
 
@@ -637,24 +649,38 @@ object в HTML - отключен цвет SVG не меняется :(
   color: rgba(0, 0, 0, 0.2);
 }
 
-
 /* Пагинация*/
 
-.pagination{
+.pagination {
   background-color: #ebebeb;
 }
 
-.pagination li,
 .pagination li a {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
   font-size: 16;
   line-height: 24px;
   letter-spacing: 5px;
-  text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.3);
+  text-transform: uppercase; 
 
   outline: 0;
+}
+
+.pagination .pagination-button {
+  color: #000000;
+}
+
+.pagination .pagination-button:hover,
+.pagination .pagination-button:focus {
+  background-color: #d9d9d9;
+}
+
+.pagination .pagination-button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.pagination a {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 .pagination li a:hover,
@@ -664,25 +690,4 @@ object в HTML - отключен цвет SVG не меняется :(
 
 .pagination li a:active {
   color: #000000;
-}
-
-.pagination .forward,
-.pagination .back {
-  color: #000000;
-}
-
-.pagination .forward:hover,
-.pagination .forward:focus,
-.pagination .back:hover,
-.pagination .back:focus {
-  color: #000000;
-
-  background-color: #d9d9d9;
-  
-}
-
-
-.pagination .forward:active,
-.pagination .back:active {
-  color: rgba(0, 0, 0, 0.3);
 }
