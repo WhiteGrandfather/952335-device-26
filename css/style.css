@@ -101,98 +101,100 @@ a.logo:active {
 
 /* Форма поиска */
 
-.serch-form {
+.search-form {
   background-color: transparent;
   border: none;
 }
 
-.serch-form::-webkit-input-placeholder {
+.search-form::-webkit-input-placeholder {
   color: #000000;
 
   opacity: 0.3;
 }
 
-.serch-form:-ms-input-placeholder {
+.search-form:-ms-input-placeholder {
   color: #000000;
 
   opacity: 0.3;
 }
 
-.serch-form::-moz-placeholder {
+.search-form::-moz-placeholder {
   color: #000000;
 
   opacity: 0.3;
 }
 
-.serch-form:-moz-placeholder {
+.search-form:-moz-placeholder {
   color: #000000;
 
   opacity: 0.3;
 }
 
-.serch-form:hover::-webkit-input-placeholder {
+.search-form:hover::-webkit-input-placeholder {
   color: #000000;
 
   opacity: 0.6;
 }
 
-.serch-form:hover:-ms-input-placeholder {
+.search-form:hover:-ms-input-placeholder {
   color: #000000;
 
   opacity: 0.6;
 }
 
-.serch-form:hover::-moz-placeholder {
+.search-form:hover::-moz-placeholder {
   color: #000000;
 
   opacity: 0.6;
 }
 
-.serch-form:hover:-moz-placeholder {
+.search-form:hover:-moz-placeholder {
   color: #000000;
 
   opacity: 0.6;
 }
 
-.serch-form:focus::-webkit-input-placeholder {
+.search-form:focus::-webkit-input-placeholder {
   color: #000000;
 
   opacity: 1;
 }
 
-.serch-form:focus:-ms-input-placeholder {
+.search-form:focus:-ms-input-placeholder {
   color: #000000;
 
   opacity: 1;
 }
 
-.serch-form:focus::-moz-placeholder {
+.search-form:focus::-moz-placeholder {
   color: #000000;
 
   opacity: 1;
 }
 
-.serch-form:focus:-moz-placeholder {
+.search-form:focus:-moz-placeholder {
   color: #000000;
 
   opacity: 1;
 }
 
-.serch-button {
+.search-button {
   border: 2px solid #000000;
   background-color: transparent;
   outline: 0;
 }
 
-a.serch-button:focus,
-a.serch-button:hover {
+.search-button:focus,
+.search-button:hover {
   color: #ffffff;
 
   background-color: #000000;
 }
 
-.serch-button:active {
+.search-button:active {
   color: rgba(255, 255, 255, 0.3);
+
+  background-color: #000000;
 }
 
 /* Хедер*/
@@ -595,7 +597,7 @@ a.serch-button:hover {
   color: #000000;
 }
 
-.filter-form input{
+.filter-form input {
   outline: 0;
 }
 
@@ -670,15 +672,15 @@ a.serch-button:hover {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.pagination a {
+.page-number {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.pagination li a:hover,
-.pagination li a:focus {
+.page-number:hover,
+.page-number:focus {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.pagination li a:active {
+.page-number:active {
   color: #000000;
 }
