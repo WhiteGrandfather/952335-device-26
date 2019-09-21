@@ -11,11 +11,13 @@
       <a class="logo" href="inex.html">
         <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
       </a>
-      <form class="search" action="https://echo.htmlacademy.ru" method="get" >
-        <label for="header-search" class="visually-hidden">Поиск</label>
-        <input type="search" class="serch-form" name="search" placeholder="Поиск по сайту" id="header-search">
-        <button type="submit" class="serch-button">Найти</button>
-      </form>
+      <div class="serch-wrapper">
+        <form class="serch" action="https://echo.htmlacademy.ru"   method="get" >
+          <label class="visually-hidden" for="header-serch" >Поиск</label>
+          <input class="serch-form" type="search" name="search"   placeholder="Поиск по сайту" id="header-serch">
+          <button class="serch-button" type="submit">Найти</button>
+        </form>
+      </div>
       <ul class="user-block list">
         <li>
           <a href="">Валентин Петухов</a>

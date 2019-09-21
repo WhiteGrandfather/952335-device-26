@@ -106,10 +106,6 @@ a.logo:active {
   border: none;
 }
 
-.serch-form:focus {
-  outline: 0;
-}
-
 .serch-form::-webkit-input-placeholder {
   color: #000000;
 
@@ -183,24 +179,19 @@ a.logo:active {
 }
 
 .serch-button {
-  font: inherit;
-
   border: 2px solid #000000;
   background-color: transparent;
   outline: 0;
 }
 
-.serch-button:hover,
-.serch-button:focus {
-  font: inherit;
+a.serch-button:focus,
+a.serch-button:hover {
   color: #ffffff;
 
-  border: 2px solid #000000;
   background-color: #000000;
 }
 
 .serch-button:active {
-  font: inherit;
   color: rgba(255, 255, 255, 0.3);
 }
 
