@@ -104,6 +104,7 @@ a.logo:active {
 .search-form {
   background-color: transparent;
   border: none;
+  outline: 0;
 }
 
 .search-form::-webkit-input-placeholder {
@@ -181,7 +182,7 @@ a.logo:active {
 .search-button {
   border: 2px solid #000000;
   background-color: transparent;
-  outline: 0;
+  outline: none;
 }
 
 .search-button:focus,
@@ -189,6 +190,7 @@ a.logo:active {
   color: #ffffff;
 
   background-color: #000000;
+  outline: none;
 }
 
 .search-button:active {
@@ -214,7 +216,7 @@ a.logo:active {
 }
 
 .add-navigation a,
-.user-block a {  
+.user-block a { 
   font-weight: 300;
   letter-spacing: normal;
   color: #464646;
@@ -276,7 +278,7 @@ a.logo:active {
   outline: 0;
 }
 
-.directory-list a:focus img{
+.directory-list a:focus img {
   background-color: #f0c52e;
 }
 
@@ -445,7 +447,7 @@ a.logo:active {
   opacity: 0.3;
 }
 
-/* PopUp Напишите нам  */
+/* PopUp Напишите нам */
 
 .write-us-form {
   font-family: Gilroy, Arial, sans-serif;
@@ -466,15 +468,19 @@ a.logo:active {
 
 .write-us-form input::-webkit-input-placeholder,
 .write-us-form textarea::-webkit-input-placeholder {
+  opacity: 0.4;
 }
+
 .write-us-form input:-ms-input-placeholder,
 .write-us-form textarea:-ms-input-placeholder {
   opacity: 0.4;
 }
+
 .write-us-form input::-moz-placeholder,
 .write-us-form textarea::-moz-placeholder {
   opacity: 0.4;
 }
+
 .write-us-form input:-moz-placeholder,
 .write-us-form textarea:-moz-placeholder {
   opacity: 0.4;
@@ -505,7 +511,7 @@ a.logo:active {
   color: #000000;
 
   background-color: transparent;
-  border: none;  
+  border: none;
   outline: 0;
 }
 
@@ -525,7 +531,7 @@ a.logo:active {
   font-weight: 800;
   font-size: 47px;
   line-height: 48px;
-  color: #000000;  
+  color: #000000;
 }
 
 .breadcrumbs a,
