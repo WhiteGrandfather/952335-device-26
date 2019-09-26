@@ -87,7 +87,31 @@ a {
   list-style: none;
 }
 
+/* Хедер*/
+
+.main-header {
+  display: flex;
+  justify-content: center;
+}
+
+.main-header-wrapper {
+  display: flex;
+  
+  flex-direction: column-reverse;
+  justify-content: center;
+  width: 1160px;
+  margin-top: 40px;
+}
+
 /* Логотип в хедере */
+
+.logo img{
+  position: relative;
+  content: "";
+
+  top: -354px;
+  left: 60px;
+}
 
 .logo:hover,
 .logo:focus {
@@ -100,6 +124,24 @@ a {
 }
 
 /* Форма поиска */
+
+
+.search-user-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0 60px;
+  padding-top: 25px;
+
+  background-color: #f7e296;
+}
+
+.search-user-wrapper {
+  display: flex;
+  min-width: 520px;
+  justify-content: space-between;
+  align-items: baseline;
+}
 
 .search-form {
   background-color: transparent;
@@ -199,16 +241,34 @@ a {
   background-color: #000000;
 }
 
-/* Хедер*/
+/* Навигация */
 
-.main-header {
-  background-color: #f7e296;
+.main-navigation {
+  padding-left: -5px;
+
+}
+
+.header-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3px;
+  margin-left: -42px;
+}
+
+.header-navigation > li:first-child {
+  width: 540px;
+}
+
+.header-navigation > li:last-child{
+  margin-left: 110px;
 }
 
 .main-navigation a {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
-  letter-spacing: 5px;
+  font-size: 18px;
+  letter-spacing: 3.6px;
+  line-height: 24px;
   text-transform: uppercase;
   color: #000000;
 
@@ -225,6 +285,11 @@ a {
   outline: 0;
 }
 
+.user-block {
+  display: flex;
+  text-align: right;
+}
+
 .user-block a {
   line-height: 36px;
 }
@@ -236,6 +301,14 @@ a {
 
 .main-header a:active {
   color: rgba(0, 0, 0, 0.3);
+}
+
+.user-block li {
+  min-width: 100px;
+}
+
+.user-block li:first-child {
+  margin-right: 160px;
 }
 
 /* Слайдер */
