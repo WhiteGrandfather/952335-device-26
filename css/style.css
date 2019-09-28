@@ -41,7 +41,8 @@ body {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 15px;
   line-height: 30px;
-  font-weight: 300;
+  font-weight: 300;  
+  letter-spacing: 0.1px;
   color: #464646;
 
   background-color: #ffffff;
@@ -54,9 +55,10 @@ a {
 .button {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
-  font-size: 18;
+  font-size: 18px;
   line-height: 24px;
-  letter-spacing: 5px;
+  letter-spacing: 3.7px;
+  text-align: center;
   text-transform: uppercase;
   color: #000000;
 
@@ -67,7 +69,7 @@ a {
 
 .button:hover,
 .button:focus {
-  background-color: #f0c52e;
+  background-color: #f0c52e;background-image: linear-gradient(to bottom, #ffffff 8px, #f0c52e 8px, #f0c52e 16px, #ffffff 16px);
 }
 
 .button:active {
@@ -85,33 +87,17 @@ a {
 
 .list {
   list-style: none;
+  padding: 0;
 }
 
-/* Хедер*/
+/* Хедер */
 
 .main-header {
   display: flex;
   justify-content: center;
 }
 
-.main-header-wrapper {
-  display: flex;
-  
-  flex-direction: column-reverse;
-  justify-content: center;
-  width: 1160px;
-  margin-top: 40px;
-}
-
 /* Логотип в хедере */
-
-.logo img{
-  position: relative;
-  content: "";
-
-  top: -354px;
-  left: 60px;
-}
 
 .logo:hover,
 .logo:focus {
@@ -125,25 +111,34 @@ a {
 
 /* Форма поиска */
 
-
-.search-user-container {
+.main-header-wrapper {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 60px;
-  padding-top: 25px;
 
-  background-color: #f7e296;
+  width: 1045px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 35px;
+  padding-top: 21px;
+  padding-left: 58px;
+  padding-right: 55px;
+
+  background-image: linear-gradient(to bottom, #ffffff 40px, #f7e296 40px);
 }
 
 .search-user-wrapper {
   display: flex;
-  min-width: 520px;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: baseline; 
 }
 
 .search-form {
+
+  /* Временно */
+  padding-left: 40px;
+
   background-color: transparent;
   border: none;
   outline: 0;
@@ -243,24 +238,26 @@ a {
 
 /* Навигация */
 
-.main-navigation {
-  padding-left: -5px;
-
-}
-
 .header-navigation {
   display: flex;
-  justify-content: space-between;
-  padding-top: 3px;
-  margin-left: -42px;
+  justify-content: flex-end;
+  width: 100%;
+
+  margin-top: 18px;
+  padding: 0;
 }
 
 .header-navigation > li:first-child {
-  width: 540px;
+  margin-right: auto;
 }
 
-.header-navigation > li:last-child{
-  margin-left: 110px;
+.header-navigation > li:not(:first-child) {
+  margin-left: 34px;
+}
+
+.header-navigation > li:last-child {
+  margin-left: 108px;
+  margin-right: 1px;
 }
 
 .main-navigation a {
@@ -276,7 +273,7 @@ a {
 }
 
 .add-navigation a,
-.user-block a { 
+.user-block a {
   font-weight: 300;
   letter-spacing: normal;
   color: #464646;
@@ -287,11 +284,25 @@ a {
 
 .user-block {
   display: flex;
-  text-align: right;
+  justify-content: flex-end;
+
+  width: 539px;
+  margin-right: 4px;
 }
 
 .user-block a {
   line-height: 36px;
+}
+
+.user-block li {
+  margin-left: 35px;
+
+  /*Временно*/
+  padding-left: 30px;
+}
+
+.user-block li:first-child {
+  margin-right: auto;
 }
 
 .main-header a:hover,
@@ -303,12 +314,11 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.user-block li {
-  min-width: 100px;
-}
+/* Main -------------------------------------------------------------------------------------------------------------*/
 
-.user-block li:first-child {
-  margin-right: 160px;
+.main-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 /* Слайдер */
@@ -409,13 +419,52 @@ a {
 
 /* О нас и Контакты */
 
+.about-contacts-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+  width: 1160px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 35px;
+
+  /* Временно */
+  padding-top: 71px;
+}
+
+.about-us,
+.contacts {
+  display: flex;
+  flex-direction: column;
+  width: 460px;
+}
+
 .about-us h2,
-.info-block h2 {
+.contacts h2 {
+  margin-bottom: 28px;
+}
+
+.contacts {
+  width: 561px;
+}
+
+.contacts-map {
+  margin-top: 24px;
+}
+
+.about-us h2,
+.contacts h2 {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 48px;
+  letter-spacing: 0.7px;
   color: #000000;
+}
+
+.about-us p:nth-child(3) {
+  letter-spacing: -0.2px;
+  margin-bottom: 51px;
 }
 
 .about-us li {
@@ -423,22 +472,42 @@ a {
   font-weight: 800;
   font-size: 16px;
   line-height: 40px;
+  letter-spacing: 0.2px;
   color: #000000;
+  
+  padding-left: 35px;
 }
 
-/*Доступность карты?
-
-.info-block a {
-  outline: 0;
+.about-us a {
+  width: 256px;
+  margin-top: 47px;
+  margin-right: auto;
+  padding-left: 4px;
 }
-*/
+
+.contacts a:last-child {
+  width: 254px;
+  margin-top: 68px;
+  margin-right: auto;
+  padding-left: 6px;
+}
 
 /* Футер */
 
 .footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 55px;
+
   color: #ffffff;
 
   background-color: #565656;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 1160px;
 }
 
 .footer a {
@@ -449,7 +518,16 @@ a {
 
 /* Футер верхний блок*/
 
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+
 .footer-top .logo {
+  margin-top: 17px;
+
   fill: #ffc600;
 }
 
@@ -460,6 +538,19 @@ a {
 
 .footer-top img:active {
   opacity: 0.3;
+}
+
+.footer-user-block {
+  display: flex;
+}
+
+.footer-user-block li {
+  text-align: right;
+  width: 124px;
+}
+
+.footer-user-block li:first-child {
+  padding-right: 6px;
 }
 
 .footer-user-block a {
@@ -477,12 +568,30 @@ a {
 
 /* Футер средний блок*/
 
+.footer-middle {
+  letter-spacing: 0px;
+
+  display: flex;
+  margin-top: 6px;
+}
+
+.footer-navigation {
+  display: flex;
+  margin-top: 17px;
+  margin-left: 162px;
+  margin-right: auto;
+}
+
+.footer-navigation li:not(:first-child) {
+  margin-left: 34px;
+}
+
 .footer-navigation a {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
-  font-size: 18;
+  font-size: 18px;
   line-height: 24px;
-  letter-spacing: 5px;
+  letter-spacing: 3.6px;
   text-transform: uppercase;
   color: #ffffff;
 }
@@ -496,7 +605,24 @@ a {
   opacity: 0.3;
 }
 
+.footer-phone {
+  margin-top: 15px;
+}
+
 /* Футер нижний блок*/
+
+.footer-bottom {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-bottom: 56px;
+}
+
+.footer-social {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .footer-social a {
   opacity: 0.3;
