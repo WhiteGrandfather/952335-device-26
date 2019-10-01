@@ -932,8 +932,6 @@ div.filter-sort-products {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-left: 30px;
-  padding-right: 30px;
 }
 
 .pagination a {
@@ -958,6 +956,11 @@ div.filter-sort-products {
 
 .pagination li:last-child {
   margin-left: auto;
+}
+
+li .pagination-button {
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .pagination .pagination-button {  
