@@ -99,6 +99,10 @@ a {
 
 /* Логотип в хедере */
 
+.main-header-wrapper .logo {
+  margin-right: auto;
+}
+
 .logo:hover,
 .logo:focus {
   opacity: 0.6;
@@ -240,7 +244,7 @@ a {
 
 .header-navigation {
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
   width: 100%;
 
   margin-top: 18px;
@@ -284,9 +288,10 @@ a {
 
 .user-block {
   display: flex;
-  justify-content: flex-end;
+  flex-wrap: wrap;
 
-  width: 539px;
+  width: 474px;
+  padding-left: 44px;
   margin-right: 4px;
 }
 
@@ -294,14 +299,15 @@ a {
   line-height: 36px;
 }
 
-.user-block li {
+.user-block li:not(:first-child) {
   margin-left: 35px;
 
   /*Временно*/
   padding-left: 30px;
 }
 
-.user-block li:first-child {
+.user-block li.enter {
+  margin-left: 0;
   margin-right: auto;
 }
 
@@ -542,11 +548,23 @@ a {
 
 .footer-user-block {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer-user-block li {
   text-align: right;
-  width: 124px;
+}
+
+.footer-user-block li:not(:first-child) {
+  margin-left: 35px;
+
+    /*Временно*/
+    padding-left: 30px;
+}
+
+.footer-user-block li.enter {
+  margin-left: 0;
+  margin-right: auto;
 }
 
 .footer-user-block li:first-child {
@@ -613,7 +631,6 @@ a {
 
 .footer-bottom {
   display: flex;
-  justify-content: flex-end;
   margin-top: 30px;
   margin-bottom: 56px;
 }
@@ -725,21 +742,52 @@ a {
 
 /* Страница каталога*/
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 59px;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 1101px;
+}
+
 .main-title {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 48px;
+  letter-spacing: 0.6px;
   color: #000000;
+
+  padding-top: 2px;
+  margin: 0;
+}
+
+.breadcrumbs {
+  display: flex;
+  margin-top: 24px;
+  margin-bottom: 56px;
 }
 
 .breadcrumbs a,
 .breadcrumbs {
   font-size: 14px;
   line-height: 24px;
+  letter-spacing: 0px;
   color: rgba(0, 0, 0, 0.3);
 
   outline: 0;
+}
+
+.breadcrumbs li {
+  margin-right: 39px;
 }
 
 .breadcrumbs a:hover,
@@ -751,16 +799,41 @@ a {
   color: rgba(0, 0, 0, 0.1);
 }
 
+
+/* filter-sort-products */
+
+div.filter-sort-products {
+  flex-direction: row;
+}
+
+.sort-products-container {
+  width: 760px;
+}
+
 /* Блок сортировки*/
+
+.sort {
+  display: flex;
+  align-items: baseline;
+}
 
 .sort h2 {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
-  font-size: 16;
+  font-size: 16px;
   line-height: 24px;
-  letter-spacing: 5px;
+  letter-spacing: 3.7px;
   text-transform: uppercase;
   color: #000000;
+
+  margin-top: 13px;
+}
+
+.sort-list {
+  display: flex;
+  
+  margin: 0;
+  margin-left: 20px;
 }
 
 .sort-list a {
@@ -770,6 +843,7 @@ a {
   color: rgba(0, 0, 0, 0.3);
 
   outline: 0;
+  margin-left: 30px;
 }
 
 .sort-list a:hover,
@@ -786,12 +860,15 @@ a {
 .filter-form {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
+
+  width: 200px;
+  margin-right: 140px;
 }
 
 .filter-form h2 {
-  font-size: 16;
+  font-size: 16px;
   line-height: 24px;
-  letter-spacing: 5px;
+  letter-spacing: 3.7px;
   text-transform: uppercase;
   color: #000000;
 }
@@ -851,20 +928,39 @@ a {
 
 .pagination {
   background-color: #ebebeb;
+
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .pagination a {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
-  font-size: 16;
+  font-size: 16px;
   line-height: 24px;
   letter-spacing: 5px;
+  text-align: center;
   text-transform: uppercase; 
 
   outline: 0;
+
+  display: block;
+  padding-top: 23px;
+  padding-bottom: 23px;
 }
 
-.pagination .pagination-button {
+.pagination li:first-child {
+  margin-right: auto;
+}
+
+.pagination li:last-child {
+  margin-left: auto;
+}
+
+.pagination .pagination-button {  
   color: #000000;
 }
 
@@ -879,6 +975,9 @@ a {
 
 .page-number {
   color: rgba(0, 0, 0, 0.3);
+
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 .page-number:hover,
