@@ -101,6 +101,26 @@ a {
   justify-content: center;
 }
 
+.header-container {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.main-header-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 1045px;
+  margin-bottom: 35px;
+  padding-top: 21px;
+  padding-left: 58px;
+  padding-right: 55px;
+
+  background-image: linear-gradient(to bottom, #ffffff 40px, #f7e296 40px);
+}
+
 /* Логотип в хедере */
 
 .main-header-wrapper .logo {
@@ -118,23 +138,6 @@ a {
 }
 
 /* Форма поиска */
-
-.main-header-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  justify-content: space-between;
-
-  width: 1045px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom: 35px;
-  padding-top: 21px;
-  padding-left: 58px;
-  padding-right: 55px;
-
-  background-image: linear-gradient(to bottom, #ffffff 40px, #f7e296 40px);
-}
 
 .search-user-wrapper {
   display: flex;
