@@ -22,7 +22,7 @@
             <li>
               <a href="">Валентин Петухов</a>
             </li>
-            <li class="enter">
+            <li class="login-link">
               <a href="">Выйти</a>
             </li>
             <li>
@@ -72,93 +72,100 @@
       </div>
     </header>
     <main>
-      <div class="main-container">
-      <div class="container">
-        <h1 class="main-title">Моноподы для селфи</h1>
-          <ul class="breadcrumbs list">
-            <li>
-              <a href="index.html">Главная</a>
-            </li>
-            <li>
-              <a href="catalog.html">Каталог товаров</a>
-            </li>
-            <li>
-              <a>Моноподы для селфи</a>
-            </li>
-          </ul>
-      </div>
-      <div class="filter-sort-products container">
-        <section class="filter-form">
-          <h2>Фильтр:</h2>
-          <div class="form-wrapper">
-            <form action="https://echo.htmlacademy.ru" method="get">
-              <fieldset class="cost">
-                <legend class="fieldset-header">Стоимость</legend>
-                <!--Сдесь будет двойной слайдер JS-->
-              </fieldset>
-              <fieldset class="color">
-                <legend class="fieldset-header">Цвет</legend>
-                <ul class="color-checkbox list">
-                  <li>
-                    <input type="checkbox" name="color-checkbox" value="black" id="color-black" checked>
-                    <label for="color-black">Черный</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="color-checkbox" value="white" id="color-white">
-                    <label for="color-white">Белый</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="color-checkbox" value="blue" id="color-blue">
-                    <label for="color-blue">Синий</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="color-checkbox" value="red" id="color-red" checked>
-                    <label for="color-red">Красный</label>
-                  </li>
-                  <li>
-                    <input type="checkbox" name="color-checkbox" value="pink" id="color-pink" checked>
-                    <label for="color-pink">Розовый</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="bluetooth">
-                <legend class="fieldset-header">bluetooth</legend>
-                <ul class="bluetooth-radio list">
-                  <li>
-                    <input type="radio" name="radio-bluetooth" value="hev" id="bluetooth-hev" checked>
-                    <label for="bluetooth-hev">Есть</label>
-                  </li>
-                  <li>
-                    <input type="radio" name="radio-bluetooth" value="no" id="bluetooth-no">
-                    <label for="bluetooth-no">Нет</label>
-                  </li>
-                </ul>
-              </fieldset>
-              <button class="button" type="submit">Показать</button>
-            </form>
-            </div>
-          </section>
-        <div class="sort-products-container">
-          <section class="sort">
-            <h2>Сортировка:</h2>
-            <ul class="sort-list list">
+      <div class="breadcrumbs-container">
+        <div class="container">
+          <h1 class="main-title">Моноподы для селфи</h1>
+            <ul class="breadcrumbs list">
               <li>
-                <a href="">По цене</a>
+                <a href="index.html">Главная</a>
               </li>
               <li>
-                <a href="">По типу</a>
+                <a href="catalog.html">Каталог товаров</a>
               </li>
               <li>
-                <a href="">По популярности</a>
-              </li>
-              <li>
-                <a href="">Стрелка вверх</a>
-              </li>
-              <li>
-                <a href="">Стрелка вниз</a>
+                <a>Моноподы для селфи</a>
               </li>
             </ul>
-          </section>
+        </div>
+      </div>
+      <div class="catalog-wrapper">
+        <div class="filter-wrapper">
+          <div class="filter-lable">
+            <p>Фильтр:</p>
+          </div>
+          <div class="form-wrapper">
+            <div class="filter-form">
+              <form action="https://echo.htmlacademy.ru" method="get">
+                <fieldset class="cost">
+                  <legend class="fieldset-header">Стоимость</legend>
+                  <!--Сдесь будет двойной слайдер JS-->
+                </fieldset>
+                <fieldset class="color">
+                  <legend class="fieldset-header">Цвет</legend>
+                  <ul class="color-checkbox list">
+                    <li>
+                      <input type="checkbox" name="color-checkbox" value="black" id="color-black" checked>
+                      <label for="color-black">Черный</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="color-checkbox" value="white" id="color-white">
+                      <label for="color-white">Белый</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="color-checkbox" value="blue" id="color-blue">
+                      <label for="color-blue">Синий</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="color-checkbox" value="red" id="color-red" checked>
+                      <label for="color-red">Красный</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="color-checkbox" value="pink" id="color-pink" checked>
+                      <label for="color-pink">Розовый</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <fieldset class="bluetooth">
+                  <legend class="fieldset-header">Bluetooth</legend>
+                  <ul class="bluetooth-radio list">
+                    <li>
+                      <input type="radio" name="radio-bluetooth" value="hev" id="bluetooth-hev" checked>
+                      <label for="bluetooth-hev">Есть</label>
+                    </li>
+                    <li>
+                      <input type="radio" name="radio-bluetooth" value="no" id="bluetooth-no">
+                      <label for="bluetooth-no">Нет</label>
+                    </li>
+                  </ul>
+                </fieldset>
+                <button class="button" type="submit">Показать</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="catalog-container">
+          <div class="sort-wrapper">
+            <section class="sort">
+              <h2>Сортировка:</h2>
+              <ul class="sort-list list">
+                <li>
+                  <a href="">По цене</a>
+                </li>
+                <li>
+                  <a href="">По типу</a>
+                </li>
+                <li>
+                  <a href="">По популярности</a>
+                </li>
+                <li>
+                  <a href="">Стрелка вверх</a>
+                </li>
+                <li>
+                  <a href="">Стрелка вниз</a>
+                </li>
+              </ul>
+            </section>
+          </div>
           <section class="products">
             <h2 class="visually-hidden">Список товаров</h2>
             <ul class="products-list list">
@@ -191,7 +198,6 @@
                 <span>4900 руб.</span>
               </li>
             </ul>
-          </section>
             <ul class="pagination list">
               <li>
                 <a class="pagination-button" href="">Назад</a>
@@ -209,7 +215,7 @@
                 <a class="pagination-button" href="">Вперед</a>
               </li>
             </ul>
-          </div>
+          </section>
         </div>
       </div>
     </main>
@@ -226,7 +232,7 @@
             <li>
               <a href="">Валентин Петухов</a>
             </li>
-            <li class="enter">
+            <li class="login-link">
               <a href="">Выйти</a>
             </li>
             <li>
