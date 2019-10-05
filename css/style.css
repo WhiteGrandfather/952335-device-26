@@ -53,7 +53,6 @@ a {
 }
 
 .button {
-  display: border-box;
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -102,8 +101,8 @@ a {
 }
 
 .header-container {
-  margin-left: 20px;
-  margin-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .main-header-wrapper {
@@ -313,7 +312,7 @@ a {
   padding-left: 30px;
 }
 
-.user-block li.login-link {
+.user-block li.login-logout {
   margin-left: 0;
   margin-right: auto;
 }
@@ -566,21 +565,19 @@ a {
 
 .footer-user-block li {
   text-align: right;
-}
 
-.footer-user-block li:not(:first-child) {
   margin-left: 35px;
 
   /*Временно*/
   padding-left: 30px;
 }
 
-.footer-user-block li.login-link {
+.footer-user-block .login-logout {
   margin-left: 0;
   margin-right: auto;
 }
 
-.footer-user-block li:first-child {
+.footer-user-block .user-name {
   padding-right: 6px;
 }
 
@@ -828,7 +825,7 @@ a {
   flex-grow: 5;
 }
 
-.filter-lable,
+.filter-label,
 .catalog-wrapper h2 {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
@@ -841,7 +838,7 @@ a {
   margin: 0;
 }
 
-.filter-lable {
+.filter-label {
   display: flex;
   background-color: #dbdbdb;
   justify-content: flex-end;
@@ -850,7 +847,7 @@ a {
   padding-right: 67px;
 }
 
-.filter-lable p {
+.filter-label p {
   width: 200px;
   padding-top: 23px;
   padding-bottom: 22px;
@@ -988,9 +985,6 @@ a {
 /* Каталог товаров*/
 
 .products {
-  display: flex;
-  flex-direction: column;
-
   width: 760px;
   margin-top: 55px;
   margin-left: 74px;
