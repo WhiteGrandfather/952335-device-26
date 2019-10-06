@@ -295,26 +295,26 @@ a {
 .user-block {
   display: flex;
   flex-wrap: wrap;
-
-  width: 474px;
-  padding-left: 44px;
-  margin-right: 4px;
 }
 
-.user-block a {
-  line-height: 36px;
-}
-
-.user-block li:not(:first-child) {
+.user-block li {
   margin-left: 35px;
 
   /*Временно*/
   padding-left: 30px;
 }
 
-.user-block li.login-logout {
+.user-block .login-logout {
   margin-left: 0;
   margin-right: auto;
+}
+
+.user-block .user-name {
+  padding-right: 6px;
+}
+
+.user-block a {
+  line-height: 36px;
 }
 
 .main-header a:hover,
