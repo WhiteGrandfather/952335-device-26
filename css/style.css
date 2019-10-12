@@ -65,14 +65,15 @@ a {
   padding: 0;
   margin: 0;
 
-  background-color: transparent;
+  background-image: linear-gradient(to bottom, #ffffff 8px, #f0c52e 8px, #f0c52e 16px, #ffffff 16px);
   border: none;
   outline: 0;
 }
 
 .button:hover,
 .button:focus {
-  background-color: #f0c52e;background-image: linear-gradient(to bottom, #ffffff 8px, #f0c52e 8px, #f0c52e 16px, #ffffff 16px);
+  background-image: none;
+  background-color: #f0c52e;
 }
 
 .button:active {
@@ -539,14 +540,25 @@ background-repeat: no-repeat;
   padding-left: 20px;
   padding-right: 20px;
   margin-bottom: 87px;
-
-  /* Временно */
-  padding-top: 71px;
 }
 
 .about-us,
 .contacts {
+  position: relative;
   width: 460px;
+  padding-top: 13px;
+}
+
+.about-us::before,
+.contacts::before {
+  position: absolute;
+  content: "";
+  background-color: #000000;
+
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 7px;
 }
 
 .contacts {
@@ -577,7 +589,13 @@ background-repeat: no-repeat;
   letter-spacing: -0.2px;
 }
 
-.about-us li {
+.about-us-list {
+  padding-top: 36px;
+  margin-bottom: 59px;
+}
+
+.about-us-list li {
+  position: relative;
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
   font-size: 16px;
@@ -588,9 +606,16 @@ background-repeat: no-repeat;
   padding-left: 35px;
 }
 
-.about-us ul {
-  padding-top: 36px;
-  margin-bottom: 59px;
+.about-us-list li::before {
+  position: absolute;
+  content: "";
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+
+  top: 16px;
+  left: 1px;
+  width: 4px;
+  height: 4px;
 }
 
 .contacts-map img {
@@ -741,18 +766,57 @@ background-repeat: no-repeat;
 
 .footer-bottom {
   display: flex;
-  margin-top: 30px;
+
+  align-items: center;
+  margin-top: 32px;
   margin-bottom: 56px;
+}
+
+.footer-bottom > div {
+  background-color: #f0c52e;
+
+  width: 80px;
+  height: 7px;
 }
 
 .footer-social {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  width: 160px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .footer-social a {
+  display: block;
   opacity: 0.3;
+  background-repeat: no-repeat;
+
+  width: 32px;
+  height: 32px;
+}
+
+.facebook-link {
+  background-image: url("/img/fb.svg");
+}
+
+.Instagram-link {
+  background-image: url("/img/instagram.svg");
+}
+
+.twitter-link {
+  background-image: url("/img/twitter.svg");
+}
+
+.htmlacademy-logo {
+  background-image: url("/img/logo-html.svg");
+  background-repeat: no-repeat;
+
+  width: 27px;
+  height: 35px;
+  margin-left: 50px;
 }
 
 .footer-social a:hover,
