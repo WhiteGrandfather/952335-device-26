@@ -121,6 +121,15 @@ a {
   background-image: linear-gradient(to bottom, #ffffff 40px, #f7e296 40px);
 }
 
+.main-header a:hover,
+.main-header a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.main-header a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 /* Логотип в хедере */
 
 .main-header-wrapper .logo {
@@ -359,18 +368,6 @@ a {
   padding-right: 5px;
 }
 
-.user-block::before {
-  position: absolute;
-  content: "";
-
-  top: 12px;
-  left: 0;
-width: 16px;
-height: 16px;
-background-image: url("/img/user.svg");
-background-repeat: no-repeat;
-}
-
 .user-block li {
   position: relative;
   text-align: right;
@@ -379,16 +376,28 @@ background-repeat: no-repeat;
   margin-left: 39px;
 }
 
+.user-block::before {
+  position: absolute;
+  content: "";
+
+  top: 12px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background-image: url("/img/user.svg");
+  background-repeat: no-repeat;
+}
+
 .user-compare::before {
   position: absolute;
   content: "";
 
   top: 14px;
   left: 5px;
-width: 16px;
-height: 16px;
-background-image: url("/img/compare.svg");
-background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  background-image: url("/img/compare.svg");
+  background-repeat: no-repeat;
 }
 
 .cart::before {
@@ -397,10 +406,10 @@ background-repeat: no-repeat;
 
   top: 12px;
   left: 3px;
-width: 16px;
-height: 16px;
-background-image: url("/img/cart.svg");
-background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  background-image: url("/img/cart.svg");
+  background-repeat: no-repeat;
 }
 
 .user-block .login-logout {
@@ -418,13 +427,9 @@ background-repeat: no-repeat;
   line-height: 36px;
 }
 
-.main-header a:hover,
-.main-header a:focus {
-  color: rgba(0, 0, 0, 0.6);
-}
 
-.main-header a:active {
-  color: rgba(0, 0, 0, 0.3);
+.user-block a:hover ~ .cart::before {
+  opacity: 0.1;
 }
 
 /* Main */
@@ -686,6 +691,11 @@ background-repeat: no-repeat;
 .footer-user-block {
   display: flex;
   flex-wrap: wrap;
+
+}
+
+.footer-user-block svg{
+fill: #FFC600;
 }
 
 .footer-user-block li {
