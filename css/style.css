@@ -541,6 +541,14 @@ a {
   margin-right: 50px;
 }
 
+.slide-2 {
+  display: none;
+}
+
+.slide-3 {
+  display: none;
+}
+
 .slide-1 img {
   padding-left: 60px;
   padding-right: 125px;
@@ -775,19 +783,22 @@ a {
   background-image: linear-gradient(to bottom, #ffffff 107px, #a6a6a6 107px);
 
   width: 100%;
-  min-height: 400px;
+  min-height: 395px;
+  margin-bottom: 78px;
 }
 
 .service {
   display: flex;
 
   width: 1160px;
+  padding-top: 15px;
 }
 
 .service-buttons {
   position: relative;
   width: 300px;
   padding-top: 71px;
+  margin: 0;
 }
 
 .button-wrapper {
@@ -825,7 +836,6 @@ a {
   background-size: 160px 40px;
   background-position: unset;
   background-color: none;
-
 }
 
 .delivery-radio {
@@ -888,6 +898,18 @@ a {
 }
 
 /* Логотипы партнеров */
+
+.partners {
+  width: 1160px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-bottom: 69px;
+}
+
+.partners-list {
+  display: flex;
+  justify-content: space-between;
+}
 
 .partners a {
   opacity: 0.2;
