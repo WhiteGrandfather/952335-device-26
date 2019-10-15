@@ -428,7 +428,7 @@ a {
   padding-left: 25px;
 }
 
-.login-logout a::before {
+.user-block .login-logout a::before {
   position: absolute;
   content: "";
   background-image: url("/img/user.svg");
@@ -518,7 +518,7 @@ a {
 .slider {
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 80px;
+  padding-bottom: 90px;
 }
 
 .slider-list {
@@ -929,7 +929,6 @@ a {
   width: 1160px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-bottom: 87px;
 }
 
 .about-us,
@@ -1029,10 +1028,11 @@ a {
 .footer {
   display: flex;
   justify-content: center;
-
   color: #ffffff;
-
   background-color: #565656;
+
+
+  margin-top: 88px;
 }
 
 .footer-wrapper {
@@ -1079,12 +1079,22 @@ a {
 
 }
 
-.footer-user-block a::before {
-  display: none;
+.footer-user-block svg {
+  position: absolute;
+  fill: #FFC600;
+
+  left: -22px;
+  top: 3px;
 }
 
-.footer-user-block svg{
-fill: #FFC600;
+.footer-compare svg {
+
+  top: 6px;
+  left: -17px;
+}
+
+.footer-cart svg {
+  top: 4px;
 }
 
 .footer-user-block li {
@@ -1106,6 +1116,7 @@ fill: #FFC600;
 }
 
 .footer-user-block a {
+  position: relative;
   color: rgba(255, 255, 255, 0.7);
 }
 
