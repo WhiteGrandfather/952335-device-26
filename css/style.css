@@ -61,8 +61,10 @@ a {
   text-align: center;
   text-transform: uppercase;
   color: #000000;
-  background-image: linear-gradient(to bottom, #ffffff 8px, #f0c52e 8px, #f0c52e 16px, #ffffff 16px);
+  background-image: linear-gradient(to bottom, transparent 8px, #f0c52e 8px, #f0c52e 16px, transparent 16px);
+  background-color: transparent;
   border: none;
+  cursor: pointer;
   outline: 0;
 
   padding: 0;
@@ -115,6 +117,7 @@ a {
   padding-top: 21px;
   padding-left: 58px;
   padding-right: 55px;
+  padding-bottom: 32px;
 
   background-image: linear-gradient(to bottom, #ffffff 40px, #f7e296 40px);
 }
@@ -372,7 +375,13 @@ a {
   z-index: 10;
   background-color: #f7e296;
 
+  top: 48px;
+  left: -58px;
+
   padding-top: 18px;
+  padding-left: 58px;
+  padding-right: 50px;
+  padding-bottom: 50px;
   min-width: 1050px;
   height: 125px;
 }
@@ -440,12 +449,16 @@ a {
   height: 16px;
 }
 
-.login-logout a:hover::before,
-.login-logout a:focus::before {
+.catalog-user .login-logout a::before {
+  display: none;
+}
+
+.user-block a:hover::before,
+.user-block a:focus::before {
   opacity: 0.6;
 }
 
-.login-logout a:focus:active {
+.user-block a:focus:active {
   opacity: 0.3;
 }
 
@@ -461,15 +474,6 @@ a {
   height: 16px;
 }
 
-.user-compare a:hover::before,
-.user-compare a:focus::before {
-  opacity: 0.6;
-}
-
-.user-compare a:focus:active {
-  opacity: 0.3;
-}
-
 .cart a::before {
   position: absolute;
   content: "";
@@ -482,15 +486,6 @@ a {
   height: 16px;
 }
 
-.cart a:hover::before,
-.cart a:focus::before {
-  opacity: 0.6;
-}
-
-.cart a:focus:active {
-  opacity: 0.3;
-}
-
 .user-block .login-logout {
   min-width: 0;
   margin-left: 0;
@@ -499,6 +494,19 @@ a {
 
 .user-block .user-name {
   padding-right: 6px;
+  margin: 0;
+}
+
+.user-block .user-name a::before {
+  position: absolute;
+  content: "";
+  background-image: url("/img/user.svg");
+  background-repeat: no-repeat;
+
+  top: 4px;
+  left: 0;
+  width: 16px;
+  height: 16px;
 }
 
 .user-block a {
@@ -524,11 +532,11 @@ a {
 .slider-list {
   position: relative;
   display: flex;
-  background-image: linear-gradient(to bottom, #f7e296 145px, #ffffff 145px);
+  background-image: linear-gradient(to bottom, #f7e296 112px, #ffffff 112px);
   overflow: hidden;
 
   width: 1078px;
-  padding-top: 34px;
+  padding-top: 2px;
   padding-left: 30px;
   padding-right: 50px;
   margin: 0;
@@ -638,13 +646,14 @@ a {
 
 .slider-controls label {
   display: inline-block;
-  margin-right: 16px;
-  width: 13px;
-  height: 13px;
   cursor: pointer;
   background-image: url("/img/slider-button-empty.svg");
   background-repeat: no-repeat;
   background-size: 12px;
+
+  margin-right: 16px;
+  width: 13px;
+  height: 13px;
 }
 
 .radio-1:checked ~ .slider-controls label[for="btn-1"],
@@ -929,6 +938,7 @@ a {
   width: 1160px;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 88px;
 }
 
 .about-us,
@@ -1030,9 +1040,6 @@ a {
   justify-content: center;
   color: #ffffff;
   background-color: #565656;
-
-
-  margin-top: 88px;
 }
 
 .footer-wrapper {
@@ -1332,6 +1339,7 @@ a {
   align-items: center;
   width: 100%;
 
+  margin-top: 35px;
   margin-bottom: 32px;
 }
 
@@ -1372,7 +1380,20 @@ a {
 }
 
 .breadcrumbs li {
+  position: relative;
   margin-right: 39px;
+}
+
+.breadcrumbs li:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  background-image: url(/img/nav-arrow.svg);
+  background-repeat: no-repeat;
+
+  top: 10px;
+  right: -23px;
+  width: 7px;
+  height: 7px;
 }
 
 .breadcrumbs a:hover,
@@ -1444,6 +1465,7 @@ a {
 }
 
 .filter-form fieldset {
+  position: relative;
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
@@ -1453,19 +1475,23 @@ a {
   border: none;
 
   margin: 0;
+  margin-bottom: 25px;
   padding: 0;
 }
 
-.filter-form fieldset {
-  margin-bottom: 24px;
-}
+.filter-form fieldset::before {
+  position: absolute;
+  content: "";
+  background-color: #000000;
 
-
-.filter-form .bluetooth {
-  margin-bottom: 19px;
+  top: -13px;
+  left: 0;
+  width: 200px;
+  height: 2px;
 }
 
 .filter-form li {
+  position: relative;
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 40px;
@@ -1473,7 +1499,7 @@ a {
   letter-spacing: 0.14px;
   color: #464646;
 
-  padding-left: 23px;
+  padding-left: 39px;
 }
 
 .filter-form .cost {
@@ -1481,31 +1507,88 @@ a {
   margin-bottom: 11px;
 }
 
-.filter-form .button {
-  padding-left: 3px;
-  width: 100%;
-}
-
-.filter-form .button:hover,
-.filter-form .button:focus {
-  background-color: #f0c52e;
-  background-image: linear-gradient(to bottom, #eeeeee 8px, #f0c52e 8px, #f0c52e 16px, #eeeeee 16px);
+.filter-form .bluetooth {
+  margin-bottom: 19px;
 }
 
 .filter-form input {
+  position: relative;
   outline: 0;
 }
 
-.filter-form input:disabled {
-  color: #a6a6a6;
+.checkbox input,
+.radio input{
+  display: none;
 }
 
-.filter-sort-products {
-  display: flex;
+.checkbox-label::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url(/img/checkbox-off.svg);
+  background-repeat: no-repeat;
+
+  top: 8px;
+  left: -1px;
+  width: 25px;
+  height: 25px;
 }
 
-.filter-sort-products .container {
-  flex-direction: row;
+.radio-label::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url(/img/radio-off.svg);
+  background-repeat: no-repeat;
+
+  top: 8px;
+  left: -1px;
+  width: 25px;
+  height: 25px;
+}
+
+.filter-form label:hover,
+.filter-form label:focus,
+.filter-form label:checked {
+  color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.filter-form label:hover::before,
+.filter-form label:focus::before,
+.filter-form label:checked::before {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.filter-form label:active,
+.filter-form label:active::before {
+  color: #000000;
+  opacity: 1;
+}
+
+.checkbox input:disabled ~ .checkbox-label,
+.checkbox input:disabled ~ .radio-label {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.checkbox input:disabled ~ .checkbox-label::before,
+.checkbox input:disabled ~ .radio-label::before {
+  opacity: 0.25;
+}
+
+.checkbox input:checked ~ .checkbox-label::before {
+  background-image: url("/img/checkbox-on.svg");
+}
+
+
+.radio input:checked ~ .radio-label::before {
+  background-image: url("/img/radio-on.svg");
+}
+
+.filter-form .button {
+  padding-left: 3px;
+  width: 100%;
 }
 
 /* Sort */
@@ -1530,11 +1613,21 @@ a {
 .sort-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 
+  width: 589px;
   padding-top: 19px;
   padding-bottom: 20px;
   margin: 0;
   margin-left: 20px;
+}
+
+.sort-up {
+  margin-left: auto;
+}
+
+.sort-down {
+  width: 11px;
 }
 
 .sort-list a {
@@ -1543,8 +1636,51 @@ a {
   line-height: 24px;
   color: rgba(0, 0, 0, 0.3);
 
+  min-height: 11px;
+  min-width: 11px;
   outline: 0;
   margin-left: 30px;
+}
+
+
+.sort-up a {
+  display: block;
+  background-image: url(/img/icon-up-dir.svg);
+  background-repeat: no-repeat;
+  background-position: 0;
+  opacity: 0.3;
+
+  width: 15px;
+  height: 15px;
+  margin: 0;
+}
+
+.sort-down {
+  margin-left: 15px;
+}
+
+.sort-down a {
+  display: block;
+  background-image: url(/img/icon-down-dir.svg);
+  background-repeat: no-repeat;
+  background-position: 0;
+  opacity: 0.3;
+
+  width: 15px;
+  height: 15px;
+  margin: 0;
+}
+
+.sort-up a:hover,
+.sort-down a:hover,
+.sort-up a:focus,
+.sort-down a:focus {
+  opacity: 0.6;
+}
+
+.sort-up a:active,
+.sort-down a:active {
+  opacity: 1;
 }
 
 .sort-list a:hover,
@@ -1552,15 +1688,21 @@ a {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.sort-list a:active {
+.sort-up a:active,
+.sort-down a:active,
+.sort-list a:active,
+.sort-list .active,
+.sort-up .active,
+.sort-down .active {
   color: #000000;
+  opacity: 1;
 }
 
 /* Каталог товаров*/
 
 .products {
   width: 760px;
-  margin-top: 55px;
+  margin-top: 60px;
   margin-left: 74px;
 }
 
@@ -1568,29 +1710,102 @@ a {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  margin: 0;
 }
 
 .products-list li {
   width: 360px;
 
   /* Временно */
-  padding-bottom: 58px;
+  padding-top: 10px;
+  padding-bottom: 36px;
+}
+
+.products-item {
+  position: relative;
+}
+
+.products-item:hover .products-button,
+.products-item:hover .products-compare {
+  display: block;
+}
+
+.products-item:hover {
+  opacity: 0.7;
+}
+
+.products-list .new-item::before {
+  position: absolute;
+  display: block;
+  content: "new";
+  font-family: Gilroy, Arial, sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  opacity: 0.2;
+
+  top: 30px;
+  right: 28px;
+  padding-top: 14px;
+  padding-left: 14px;
+  width: 42px;
+  height: 42px;
+}
+
+.products-button {
+  position: absolute;
+  display: none;
+
+  top: 180px;
+  left: 80px;
+  width: 200px;
+}
+
+.products-compare {
+  position: absolute;
+  display: none;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 13px;
+  cursor: pointer;
+
+  top: 225px;
+  left: 103px;
+}
+
+.description-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 23px;
 }
 
 .products-list a {
   font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
-  font-size: 18;
+  font-size: 18px;
   line-height: 24px;
   color: #000000;
-
   outline: 0;
+
+  width: 255px;
 }
 
+
 .products-list span {
-  font-size: 18;
+  font-family: Gilroy, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 16px;
   line-height: 24px;
+  letter-spacing: 0.2px;
+  text-align: right;
   color: #464646;
+
+  width: 100px;
+  padding-top: 1px;
 }
 
 .compare {
@@ -1619,16 +1834,19 @@ a {
 
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin-bottom: 80px;
+  width: 754px;
+  padding-top: 1px;
+  padding-left: 4px;
+  padding-right: 1px;
+  margin-top: 0;
+  margin-bottom: 75px;
 }
 
-.pagination a {
-  font-family: Gilroy, Arial, sans-serif;
+.pagination a {  font-family: Gilroy, Arial, sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 5px;
+  letter-spacing: 3.6px;
   text-align: center;
   text-transform: uppercase;
 
@@ -1645,6 +1863,11 @@ a {
 
 .pagination li:last-child {
   margin-left: auto;
+}
+
+.number-wrapper {
+  display: flex;
+  padding-left: 8px;
 }
 
 .pagination-button {
@@ -1668,8 +1891,8 @@ a {
 .page-number {
   color: rgba(0, 0, 0, 0.3);
 
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 14px;
+  margin-right: 13px;
 }
 
 .page-number:hover,
@@ -1677,6 +1900,8 @@ a {
   color: rgba(0, 0, 0, 0.6);
 }
 
-.page-number:active {
+.page-number:active,
+.active {
   color: #000000;
 }
+
