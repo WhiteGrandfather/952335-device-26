@@ -180,7 +180,7 @@ a {
   height: 16px;
 
   background-color: transparent;
-  background-image: url(/img/search.svg);
+  background-image: url("../img/search.svg");
 }
 
 .search-form {
@@ -356,7 +356,7 @@ a {
   left: 231px;
   width: 16px;
   height: 16px;
-  background-image: url("/img/plus.svg");
+  background-image: url("../img/plus.svg");
   background-repeat: no-repeat;
   opacity: 0.3;
 }
@@ -440,7 +440,7 @@ a {
 .user-block .login-logout a::before {
   position: absolute;
   content: "";
-  background-image: url("/img/user.svg");
+  background-image: url("../img/user.svg");
   background-repeat: no-repeat;
 
   top: 4px;
@@ -465,7 +465,7 @@ a {
 .user-compare a::before {
   position: absolute;
   content: "";
-  background-image: url("/img/compare.svg");
+  background-image: url("../img/compare.svg");
   background-repeat: no-repeat;
 
   top: 6px;
@@ -477,7 +477,7 @@ a {
 .cart a::before {
   position: absolute;
   content: "";
-  background-image: url("/img/cart.svg");
+  background-image: url("../img/cart.svg");
   background-repeat: no-repeat;
 
   top: 4px;
@@ -500,7 +500,7 @@ a {
 .user-block .user-name a::before {
   position: absolute;
   content: "";
-  background-image: url("/img/user.svg");
+  background-image: url("../img/user.svg");
   background-repeat: no-repeat;
 
   top: 4px;
@@ -647,7 +647,7 @@ a {
 .slider-controls label {
   display: inline-block;
   cursor: pointer;
-  background-image: url("/img/slider-button-empty.svg");
+  background-image: url("../img/slider-button-empty.svg");
   background-repeat: no-repeat;
   background-size: 12px;
 
@@ -659,7 +659,7 @@ a {
 .radio-1:checked ~ .slider-controls label[for="btn-1"],
 .radio-2:checked ~ .slider-controls label[for="btn-2"],
 .radio-3:checked ~ .slider-controls label[for="btn-3"] {
-  background-image: url("/img/slider-button.svg");
+  background-image: url("../img/slider-button.svg");
 }
 
 .slider-table {
@@ -1213,19 +1213,19 @@ a {
 }
 
 .facebook-link {
-  background-image: url("/img/fb.svg");
+  background-image: url("../img/fb.svg");
 }
 
 .Instagram-link {
-  background-image: url("/img/instagram.svg");
+  background-image: url("../img/instagram.svg");
 }
 
 .twitter-link {
-  background-image: url("/img/twitter.svg");
+  background-image: url("../img/twitter.svg");
 }
 
 .htmlacademy-logo {
-  background-image: url("/img/logo-html.svg");
+  background-image: url("../img/logo-html.svg");
   background-repeat: no-repeat;
 
   width: 27px;
@@ -1384,7 +1384,7 @@ a {
 .breadcrumbs li:not(:last-child)::after {
   position: absolute;
   content: "";
-  background-image: url(/img/nav-arrow.svg);
+  background-image: url("../img/nav-arrow.svg");
   background-repeat: no-repeat;
 
   top: 10px;
@@ -1522,7 +1522,7 @@ a {
   position: absolute;
   display: block;
   content: "";
-  background-image: url(/img/checkbox-off.svg);
+  background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
 
   top: 8px;
@@ -1535,7 +1535,7 @@ a {
   position: absolute;
   display: block;
   content: "";
-  background-image: url(/img/radio-off.svg);
+  background-image: url("../img/radio-off.svg");
   background-repeat: no-repeat;
 
   top: 8px;
@@ -1575,12 +1575,12 @@ a {
 }
 
 .checkbox input:checked ~ .checkbox-label::before {
-  background-image: url("/img/checkbox-on.svg");
+  background-image: url("../img/checkbox-on.svg");
 }
 
 
 .radio input:checked ~ .radio-label::before {
-  background-image: url("/img/radio-on.svg");
+  background-image: url("../img/radio-on.svg");
 }
 
 .filter-form .button {
@@ -1642,7 +1642,7 @@ a {
 
 .sort-up a {
   display: block;
-  background-image: url(/img/icon-up-dir.svg);
+  background-image: url("../img/icon-up-dir.svg");
   background-repeat: no-repeat;
   background-position: 0;
   opacity: 0.3;
@@ -1658,7 +1658,7 @@ a {
 
 .sort-down a {
   display: block;
-  background-image: url(/img/icon-down-dir.svg);
+  background-image: url("../img/icon-down-dir.svg");
   background-repeat: no-repeat;
   background-position: 0;
   opacity: 0.3;
