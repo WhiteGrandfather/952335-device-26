@@ -35,27 +35,29 @@
             <ul class="header-navigation list">
               <li class="header-catalog">
                 <a href="catalog.html">Каталог товаров</a>
-                <ul class="add-navigation list">
-                  <li>
-                    <a href="">Виртуальная реальность</a>
-                  </li>
-                  <li>
-                    <a href="">Моноподы для селфи</a>
-                  </li>
-                  <li>
-                    <a href="">Экшн-камеры</a>
-                  </li>
-                  <li>
-                    <a href="">Фитнес-браслеты</a>
-                  </li>
-                  <li>
-                    <a href="">Умные часы</a>
-                  </li>
-                  <li class="break"></li>
-                  <li>
-                    <a href="">Квадрокоптеры</a>
-                  </li>
-                </ul>
+                <div class="add-navigation-wrapper">
+                  <ul class="add-navigation list">
+                    <li>
+                      <a href="">Виртуальная реальность</a>
+                    </li>
+                    <li>
+                      <a href="">Моноподы для селфи</a>
+                    </li>
+                    <li>
+                      <a href="">Экшн-камеры</a>
+                    </li>
+                    <li>
+                      <a href="">Фитнес-браслеты</a>
+                    </li>
+                    <li>
+                      <a href="">Умные часы</a>
+                    </li>
+                    <li>
+                      <a href="">Квадрокоптеры</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
               </li>
               <li>
                 <a href="">Доставка</a>
@@ -256,23 +258,23 @@
         <h2 class="visually-hidden">Наши пaртнеры</h2>
         <ul class="partners-list list">
           <li>
-            <a href="">
-              <img src="img/logo-1.png" width="260" height="100" alt="DJI">
+            <a class="logo-1" href="">
+              <img src="img/logo-1-grey.png" width="260" height="100" alt="DJI">
             </a>
           </li>
           <li>
-            <a href="">
-              <img src="img/logo-2.png" width="260" height="100" alt="SP Gadgets">
+            <a class="logo-2" href="">
+              <img src="img/logo-2-grey.png" width="260" height="100" alt="SP Gadgets">
             </a>
           </li>
           <li>
-            <a href="">
-              <img src="img/logo-3.png" width="260" height="100" alt="GoPro">
+            <a class="logo-3" href="">
+              <img src="img/logo-3-grey.png" width="260" height="100" alt="GoPro">
             </a>
           </li>
           <li>
-            <a href="">
-              <img src="img/logo-4.png" width="260" height="100" alt="Vive">
+            <a class="logo-4" href="">
+              <img src="img/logo-4-grey.png" width="260" height="100" alt="Vive">
             </a>
           </li>
         </ul>
@@ -353,29 +355,37 @@
         </div>
         </div>
     </footer>
-    <section class="write-us-popup">
-      <h2 class="visually-hidden">Напишите нам</h2>
-        <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
-          <p>
-            <label for="write-us-name">Ваше имя:</label>
-            <input type="text" name="login" placeholder="Имя Фамилия" id="write-us-name">
-          </p>
-          <p>
-            <label for="write-us-email">Ваш e-mail:</label>
-            <input type="email" name="e-mail" placeholder="email@example.com" id="write-us-email">
-          </p>
-          <p>
-            <label for="write-us-text">Текст письма:</label>
-            <textarea name="textarea" rows="7" placeholder="В свободной форме" id="write-us-text"></textarea>
-          </p>
-          <button class="button" type="submit">Отправить</button>
-        </form>
-      <button class="button-close" type="button">Закрыть</button>
+    <section class="write-us-popup popup">
+      <div class="popup-wrapper">
+        <h2 class="visually-hidden">Напишите нам</h2>
+        <div>
+          <form class="write-us-form" action="https://echo.htmlacademy.ru" method="post">
+            <p>
+              <label for="write-us-name">Ваше имя:</label>
+              <input type="text" name="login" placeholder="Имя Фамилия" id="write-us-name">
+            </p>
+            <p>
+              <label for="write-us-email">Ваш e-mail:</label>
+              <input type="email" name="e-mail" placeholder="email@example.com" id="write-us-email">
+            </p>
+            <p class="write-us-text">
+              <label for="write-us-text">Текст письма:</label>
+              <textarea name="textarea" placeholder="В свободной форме" id="write-us-text"></textarea>
+            </p>
+            <button class="button" type="submit">Отправить</button>
+          </form>
+        </div>
+        <button class="button-close" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      </div>
     </section>
-    <section class="map-popup">
+    <section class="map-popup popup">
       <h2 class="visually-hidden">Карта проезда</h2>
       <img src="img/map-big.png" width="960" height="559" alt="Офис компании по адресу ул. Строителей 15, г. Москва">
-      <button class="button-close" type="button">Закрыть</button>
+      <button class="button-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
   </body>
 </html>
