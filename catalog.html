@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="main-header">
-      <div class="header-container">
+    <header class="wrapper">
+      <div class="container">
         <div class="main-header-wrapper">
           <a class="logo" href="index.html">
             <img src="img/logo.svg" width="163" height="35" alt="Логотип магазина Device">
@@ -44,19 +44,19 @@
                       <a href="">Виртуальная реальность</a>
                     </li>
                     <li>
-                      <a href="">Моноподы для селфи</a>
-                    </li>
-                    <li>
-                      <a href="">Экшн-камеры</a>
-                    </li>
-                    <li>
                       <a href="">Фитнес-браслеты</a>
+                    </li>
+                    <li>
+                      <a href="">Квадрокоптеры</a>
+                    </li>
+                    <li>
+                      <a href="">Моноподы для селфи</a>
                     </li>
                     <li>
                       <a href="">Умные часы</a>
                     </li>
                     <li>
-                      <a href="">Квадрокоптеры</a>
+                      <a href="">Экшн-камеры</a>
                     </li>
                   </ul>
                 </div>
@@ -77,7 +77,7 @@
     </header>
     <main>
       <div class="breadcrumbs-container">
-        <div class="container">
+        <div class="breadcrumbs-wrapper">
           <h1 class="main-title">Моноподы для селфи</h1>
             <ul class="breadcrumbs list">
               <li>
@@ -107,23 +107,23 @@
                 <fieldset class="color">
                   <legend class="fieldset-header">Цвет</legend>
                   <ul class="color-checkbox list">
-                    <li class="checkbox">
+                    <li>
                       <input type="checkbox" name="color-checkbox" value="black" id="color-black" checked>
                       <label class="checkbox-label" for="color-black">Черный</label>
                     </li>
-                    <li class="checkbox">
+                    <li>
                       <input type="checkbox" name="color-checkbox" value="white" id="color-white">
                       <label class="checkbox-label" for="color-white">Белый</label>
                     </li>
-                    <li class="checkbox">
+                    <li>
                       <input type="checkbox" name="color-checkbox" value="blue" id="color-blue">
                       <label class="checkbox-label" for="color-blue">Синий</label>
                     </li>
-                    <li class="checkbox">
+                    <li>
                       <input type="checkbox" name="color-checkbox" value="red" id="color-red" checked>
                       <label class="checkbox-label" for="color-red">Красный</label>
                     </li>
-                    <li class="checkbox">
+                    <li>
                       <input type="checkbox" name="color-checkbox" value="pink" id="color-pink" checked>
                       <label class="checkbox-label" for="color-pink">Розовый</label>
                     </li>
@@ -132,11 +132,11 @@
                 <fieldset class="bluetooth">
                   <legend class="fieldset-header">Bluetooth</legend>
                   <ul class="bluetooth-radio list">
-                    <li class="radio">
+                    <li>
                       <input type="radio" name="radio-bluetooth" value="hev" id="bluetooth-hev" checked>
                       <label class="radio-label" for="bluetooth-hev">Есть</label>
                     </li>
-                    <li class="radio">
+                    <li>
                       <input type="radio" name="radio-bluetooth" value="no" id="bluetooth-no">
                       <label class="radio-label" for="bluetooth-no">Нет</label>
                     </li>
@@ -161,11 +161,15 @@
                 <li>
                   <a href="">По популярности</a>
                 </li>
-                <li class="sort-up">
-                  <a href=""><span class="visually-hidden">Сортировака по возрастанию</span></a>
+                <li class="sort-up sort-arrow">
+                  <a href="">
+                    <span class="visually-hidden">Сортировака по возрастанию</span>
+                  </a>
                 </li>
-                <li class="sort-down">
-                  <a class="active" href=""><span class="visually-hidden">Сортировака по убыванию</span></a>
+                <li class="sort-down sort-arrow">
+                  <a class="active" href="">
+                    <span class="visually-hidden">Сортировака по убыванию</span>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -253,16 +257,26 @@
           </a>
           <ul class="footer-user-block list">
             <li class="user-name">
-              <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 12"><path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>Валентин Петухов</a>
+              <a class="user-link" href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 12"><path d="M.032 12h12.937c-.163-2.643-2.074-4.837-4.671-5.543a3.47 3.47 0 0 0 1.687-2.972 3.485 3.485 0 0 0-6.97 0c0 1.264.68 2.361 1.688 2.972C2.106 7.163.194 9.357.032 12z"/></svg>
+                Валентин Петухов
+              </a>
             </li>
             <li class="login-logout">
-              <a href="">Выйти</a>
+              <a class="user-link" href="">Выйти</a>
             </li>
             <li class="footer-compare">
-              <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>Сравнить</a>
+              <a class="user-link" href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"><path d="M8 2h1.984v8H8zM0 3h1.984v7H0zM4 0h2v10H4z"/></svg>
+                Сравнить
+              </a>
             </li>
             <li class="footer-cart">
-              <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/></svg>Корзина</a>
+              <a class="user-link" href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.864 3.017a.429.429 0 0 0-.327-.154H9.225V4.09c0 .563-.484 1.022-1.08 1.022-.594 0-1.078-.458-1.078-1.022V2.863H4.909V4.09c0 .563-.485 1.022-1.08 1.022-.595 0-1.078-.458-1.078-1.022V2.863H.438a.43.43 0 0 0-.327.154.472.472 0 0 0-.108.358l.776 7.134c.015.806.642 1.455 1.411 1.455h7.595c.77 0 1.396-.649 1.411-1.455l.776-7.134a.476.476 0 0 0-.108-.358z"/><path d="M3.829 4.499c.239 0 .433-.184.433-.409V1.84c0-.632.672-1.022 1.295-1.022h1.079c.655 0 1.078.401 1.078 1.022v2.25c0 .225.194.409.431.409.239 0 .433-.184.433-.409V1.84C8.577.773 7.761 0 6.636 0H5.557c-1.19 0-2.159.826-2.159 1.84v2.25c0 .225.194.409.431.409z"/>
+                </svg>
+                Корзина
+              </a>
             </li>
           </ul>
         </div>
@@ -288,7 +302,7 @@
               <a class="facebook-link" href="fb.com"><span class="visually-hidden">Фейсбук</span></a>
             </li>
             <li>
-              <a class="Instagram-link" href="Instagram.com"><span class="visually-hidden">Инстаграм</span></a>
+              <a class="instagram-link" href="instagram.com"><span class="visually-hidden">Инстаграм</span></a>
             </li>
             <li>
               <a class="twitter-link" href="twitter.com"><span class="visually-hidden">Твиттер</span></a>
