@@ -2,36 +2,32 @@
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/opensans.woff2") format("woff2"),
-  url("/fonts/opensans.woff") format("woff"),
-  url("/fonts/opensans.otf") format("embedded-opentype");
+  src: url("../fonts/opensans.woff2") format("woff2"),
+  url("../fonts/opensans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Open Sans";
-  src: url("/fonts/opensanslight.woff2") format("woff2"),
-  url("/fonts/opensanslight.woff") format("woff"),
-  url("/fonts/opensanslight.otf") format("embedded-opentype");
+  src: url("../fonts/opensanslight.woff2") format("woff2"),
+  url("../fonts/opensanslight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/gilroyextrabold.woff2") format("woff2"),
-  url("/fonts/gilroyextrabold.woff") format("woff"),
-  url("/fonts/gilroyextrabold.otf") format("embedded-opentype");
+  src: url("../fonts/gilroyextrabold.woff2") format("woff2"),
+  url("../fonts/gilroyextrabold.woff") format("woff");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy";
-  src: url("/fonts/gilroylight.woff2") format("woff2"),
-  url("/fonts/gilroylight.woff") format("woff"),
-  url("/fonts/gilroylight.otf") format("embedded-opentype");
+  src: url("../fonts/gilroylight.woff2") format("woff2"),
+  url("../fonts/gilroylight.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
@@ -375,32 +371,27 @@ a {
   opacity: 0.3;
 }
 
-.header-catalog:hover .add-navigation-wrapper,
-.header-catalog:focus .add-navigation-wrapper {
-  display: block;
+.header-catalog:hover .add-navigation,
+.header-catalog:focus .add-navigation {
+  display: flex;
 }
 
-.add-navigation-wrapper {
+.add-navigation {
   position: absolute;
   z-index: 10;
   top: 48px;
   left: -58px;
 
   display: none;
-  padding-top: 18px;
-  padding-left: 58px;
-  padding-right: 50px;
-  padding-bottom: 33px;
-  min-width: 1050px;
-
-  background-color: #f7e296;
-}
-
-.add-navigation {
-  display: flex;
   align-content: flex-start;
   flex-wrap: wrap;
-  width: 650px;
+  width: 653px;
+  padding-top: 18px;
+  padding-left: 58px;
+  padding-right: 450px;
+  padding-bottom: 33px;
+
+  background-color: #f7e296;
 }
 
 .add-navigation li {
@@ -720,37 +711,14 @@ a {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 1160px;
-  padding-bottom: 60px
+  padding-bottom: 36px
 }
 
-.directory-list a {
+.directory-list .popular {
   position: relative;
 
   display: block;
   width: 160px;
-  height: 240px;
-
-  outline: 0;
-}
-
-.directory-list a:active {
-  opacity: 0.3;
-}
-
-.directory-list .directory-text:before {
-  position: absolute;
-  content: "";
-  top: 0;
-
-  width: 160px;
-  height: 160px;
-
-  background-color: rgba(240, 197, 46, 0.5);
-  background-repeat: no-repeat;
-}
-
-.directory-list .directory-text {
-  display: block;
   padding-top: 192px;
 
   font-family: "Gilroy", Arial, sans-serif;
@@ -759,48 +727,68 @@ a {
   line-height: 24px;
   letter-spacing: 0.2px;
   color: #000000;
+
+  outline: 0;
+}
+
+.directory-list a:active {
+  opacity: 0.3;
+}
+
+.popular:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left:0;
+
+  width: 160px;
+  height: 160px;
+
+  background-color: rgba(240, 197, 46, 0.5);
+  background-repeat: no-repeat;
 }
 
 .directory-small .directory-text {
+  display: block;
   padding-right: 40px;
 }
 
-.popular:hover .directory-text:before,
-.popular:focus .directory-text:before {
+.popular:hover:before,
+.popular:focus:before {
   background-color: #f0c52e;
 }
 
-.popular-1 .directory-text:before {
+.virtual-reality:before {
   background-image: url("../img/popular-1.svg");
   background-position-x: 31px;
   background-position-y: 51px;
 }
 
-.popular-2 .directory-text:before {
+.selfi-monopods:before {
   background-image: url("../img/popular-2.svg");
   background-position-x: 38px;
   background-position-y: 40px;
 }
 
-.popular-3 .directory-text:before {
+.action-cameras:before {
   background-image: url("../img/popular-3.svg");
   background-position-x: 49px;
   background-position-y: 37px;
 }
 
-.popular-4 .directory-text:before {
+.fitness-bracelets:before {
   background-image: url("../img/popular-4.svg");
   background-position-x: 28px;
   background-position-y: 49px;
 }
 
-.popular-5 .directory-text:before {
+.smartwatch:before {
   background-image: url("../img/popular-5.svg");
   background-position-x: 55px;
   background-position-y: 31px;
 }
 
-.popular-6 .directory-text:before {
+.quadcopter:before {
   background-image: url("../img/popular-6.svg");
   background-position-x: 13px;
   background-position-y: 48px;
@@ -815,21 +803,21 @@ a {
   min-height: 395px;
   margin-bottom: 78px;
 
-  background-image: linear-gradient(to bottom, #ffffff 107px, #a6a6a6 107px);
+  background-image: linear-gradient(to bottom, transparent 130px, #a6a6a6 130px);
 }
 
 .service {
   display: flex;
-
+  justify-content: flex-start;
   width: 1160px;
+  min-height: 350px;
   padding-top: 15px;
+  padding-bottom: 54px;
 }
 
 .service-buttons {
-  position: relative;
-
-  width: 300px;
-  padding-top: 71px;
+  width: 277px;
+  padding-top: 95px;
   margin: 0;
 }
 
@@ -837,12 +825,16 @@ a {
   padding-bottom: 24px;
 }
 
-.delivery-button {
+.service-buttons li {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.service-buttons .button {
   display: block;
   width: 160px;
   padding-top: 7.5px;
   padding-bottom: 8.5px;
-  padding-right: 120px;
   padding-left: 2px;
 
   font-family: "Gilroy", Arial, sans-serif;
@@ -861,58 +853,50 @@ a {
   cursor: pointer;
   border: none;
   outline: 0;
-
 }
 
-.service-buttons .delivery-button:hover,
-.service-buttons .delivery-button:focus {
-  background-image: linear-gradient(to bottom, #f0c52e 0%, #f0c52e 100%);
-  background-size: 160px 40px;
-  background-position: unset;
-  background-color: none;
-}
-
-.delivery-radio {
-  display: none;
-}
-
-.delivery-radio:checked ~ .delivery-button {
+.service-buttons .checked {
   color: #f7e184;
 
   background-color: #000000;
   background-image: none;
 }
 
-.delivery-radio:checked ~ .service-popup {
-  display: flex;
+.service-buttons .button:hover,
+.service-buttons .button:focus {
+  background-image: linear-gradient(to bottom, #f0c52e 0%, #f0c52e 100%);
+  background-size: 160px 40px;
+  background-position: unset;
+  background-color: transparent;
 }
 
 .service-popup {
-  position: absolute;
-  top: -9px;
-  left: 277px;
-
-  display: none;
-  justify-content: space-between;
-  width: 694px;
   min-height: 246px;
-  padding-top: 73px;
+  padding-top: 61px;
   padding-left: 116px;
 
   border-left: 7px solid #000000;
 }
 
-.service-popup li {
-  display: none;
-  justify-content: space-between;
+.service-popup li{
+display: none;
+justify-content: space-between;
+
+width: 714px;
+}
+
+.service-popup .checked {
+  display: flex
 }
 
 .service-content {
   width: 460px;
+  padding-top: 12px;
 }
 
 .service-popup h3 {
   margin: 0;
+  padding-bottom: 31px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
@@ -923,16 +907,20 @@ a {
   color: #000000;
 }
 
-.service-popup p {
-  padding-top: 16px;
+.service-content p {
+  margin:0;
 
-  letter-spacing: 0.28px;
+  letter-spacing: 0.3px;
 }
 
-.service-popup img {
-  padding-top: 12px;
+.service-delivery img {
+  padding-top: 23px;
+  padding-right:20px;
 }
 
+.service-credit img {
+  padding-right:24px;
+}
 /* Логотипы партнеров */
 
 .partners {
@@ -1919,20 +1907,22 @@ a {
 }
 
 .products-list .new-item::before {
+  box-sizing: border-box;
   position: absolute;
   content: "new";
   top: 29px;
   right: 28px;
 
   display: block;
-  width: 43px;
-  height: 42px;
-  padding-top: 14px;
-  padding-left: 13px;
+  width: 60px;
+  height: 60px;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 14px;
+  line-height:58px;
+  text-indent: 2px;
+  text-align: center;
   letter-spacing: 0.9px;
   text-transform: uppercase;
 
