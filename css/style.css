@@ -1673,16 +1673,12 @@ width: 714px;
   color: #464646;
 }
 
-.filter-form .cost {
-  margin-bottom: 80px;
-}
-
 .cost-header{
   padding-bottom: 34px;
 }
 
 .range-controls {
-  height: 80px;
+  min-height: 56px;
   padding-top: 1px;
 }
 
