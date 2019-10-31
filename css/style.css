@@ -1803,22 +1803,15 @@ width: 714px;
   background-repeat: no-repeat;
 }
 
-.filter-form label:hover,
-.filter-form label:focus,
-.filter-form label:checked {
+.filter-form label:not(.price):hover,
+.filter-form label:not(.price):focus,
+.filter-form label:not(.price):checked {
   color: rgba(0, 0, 0, 0.6);
 
   cursor: pointer;
 }
 
-.filter-form label:hover::before,
-.filter-form label:focus::before,
-.filter-form label:checked::before {
-  cursor: pointer;
-  opacity: 0.6;
-}
-
-.filter-form label:active,
+.filter-form label:not(.price):active,
 .filter-form label:active::before {
   color: #000000;
 
