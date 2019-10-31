@@ -24,7 +24,7 @@
                 <a href="">Валентин Петухов</a>
               </li>
               <li class="login-logout">
-                <a href="">Выйти</a>
+                <a class="visit" href="">Выйти</a>
               </li>
               <li class="user-compare">
                 <a href="">Сравнить</a>
@@ -99,8 +99,24 @@
             <div class="filter-form">
               <form action="https://echo.htmlacademy.ru" method="get">
                 <fieldset class="cost">
-                  <legend class="fieldset-header">Стоимость</legend>
-                  <!--Сдесь будет двойной слайдер JS-->
+                  <legend class="cost-header">Стоимость</legend>
+                  <div class="range-controls">
+                    <div class="scale">
+                      <div class="bar" style="width: 60%"></div>
+                    </div>
+                    <div class="toggle toggle-min">
+                      <div class="price-wrapper">
+                        <label class="min-price" for="min-price">от</label>
+                        <input name="min-price" type="text" id="min-price" value="0">
+                      </div>
+                    </div>
+                    <div class="toggle toggle-max">
+                      <div class="price-wrapper">
+                        <label class="max-price" for="max-price">до</label>
+                        <input name="max-price" type="text" id="max-price" value="8000">
+                      </div>
+                    </div>
+                  </div>
                 </fieldset>
                 <fieldset class="color">
                   <legend class="fieldset-header">Цвет</legend>
@@ -114,7 +130,7 @@
                       <label class="checkbox-label" for="color-white">Белый</label>
                     </li>
                     <li>
-                      <input type="checkbox" name="color-checkbox" value="blue" id="color-blue">
+                      <input type="checkbox" name="color-checkbox" value="blue" id="color-blue" checked>
                       <label class="checkbox-label" for="color-blue">Синий</label>
                     </li>
                     <li>
@@ -122,8 +138,8 @@
                       <label class="checkbox-label" for="color-red">Красный</label>
                     </li>
                     <li>
-                      <input type="checkbox" name="color-checkbox" value="pink" id="color-pink" checked>
-                      <label class="checkbox-label" for="color-pink">Розовый</label>
+                      <input type="checkbox" name="color-checkbox" value="pink" id="color-pink">
+                      <label class="checkbox-label" for="color-pink" >Розовый</label>
                     </li>
                   </ul>
                 </fieldset>
@@ -261,7 +277,7 @@
               </a>
             </li>
             <li class="login-logout">
-              <a class="user-link" href="">Выйти</a>
+              <a class="user-link visit" href="">Выйти</a>
             </li>
             <li class="footer-compare">
               <a class="user-link" href="">

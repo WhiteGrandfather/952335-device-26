@@ -55,15 +55,15 @@ a {
 .button {
   display: block;
   width: 136px;
-  height: 40px;
-  padding: 0;
+  padding-top: 8px;
+  padding-bottom: 8px;
   margin: 0;
 
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 800;
   font-size: 18px;
   letter-spacing: 3.7px;
-  line-height: 40px;
+  line-height: 24px;
   text-align: center;
   text-transform: uppercase;
   color: #000000;
@@ -517,6 +517,10 @@ a {
   margin: 0;
 }
 
+.login-logout .visit {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .user-block .user-name a::before {
   position: absolute;
   content: "";
@@ -807,7 +811,7 @@ a {
   min-height: 395px;
   margin-bottom: 78px;
 
-  background-image: linear-gradient(to bottom, transparent 130px, #a6a6a6 130px);
+  background-image: linear-gradient(to bottom, transparent 130px, #e5e5e5 130px);
 }
 
 .service {
@@ -1066,13 +1070,11 @@ width: 714px;
 
 .about-us .button {
   width: 256px;
-  padding: 0;
   padding-left: 4px
 }
 
 .contacts .button {
   width: 256px;
-  padding: 0;
   padding-left: 3px;
   margin-left: 1px;
 }
@@ -1183,6 +1185,10 @@ width: 714px;
 
 .user-link:active svg{
   opacity: 0.3;
+}
+
+.footer-user-block .visit {
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* Футер средний блок*/
@@ -1668,8 +1674,90 @@ width: 714px;
 }
 
 .filter-form .cost {
-  padding-bottom: 106px;
-  margin-bottom: 10px;
+  margin-bottom: 80px;
+}
+
+.cost-header{
+  padding-bottom: 34px;
+}
+
+.range-controls {
+  height: 80px;
+  padding-top: 1px;
+}
+
+.range-controls .scale {
+  position: relative;
+  height: 2px;
+
+  background-color: #dbdbdb;
+}
+
+.toggle {
+  position: absolute;
+  top: 49px;
+  left: -5px;
+
+  width: 4px;
+  height: 4px;
+
+  background-color: #dbdbdb;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 #cfcfcf;
+  outline: 1px;
+  outline-color: transparent;
+  cursor: pointer;
+}
+
+.price-wrapper {
+  position: relative;
+  left: -3px;
+
+  display: flex;
+  box-sizing: border-box;
+  align-items: baseline;
+
+  padding-top: 12px;
+}
+
+.toggle-max {
+  left: 108px;
+}
+
+.toggle-max .price-wrapper {
+  left: -25px;
+}
+
+.price-wrapper input {
+  width: 50px;
+}
+
+.price-wrapper label {
+  padding-right: 4px;
+}
+
+.price-wrapper input,
+.price-wrapper label {
+  font: inherit;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+
+  border: none;
+  background-color: transparent;
+  opacity: 0.2;
+}
+
+.toggle:hover,
+.toggle:focus {
+  border: 9px solid #ffffff;
+}
+
+.range-controls .bar {
+  height: 2px;
+
+  background: #91c92f;
 }
 
 .filter-form .bluetooth {
