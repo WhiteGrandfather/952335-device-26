@@ -805,11 +805,7 @@ a {
 
 /* Блок услуг */
 
-.service-container {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  min-height: 395px;
+.service-wpapper {
   margin-bottom: 78px;
 
   background-image: linear-gradient(to bottom, transparent 130px, #e5e5e5 130px);
@@ -1515,8 +1511,6 @@ width: 714px;
   display: flex;
   flex-direction: column;
   padding-left: 59px;
-  margin-left: 10px;
-  margin-right: 10px;
   width: 1101px;
 }
 
