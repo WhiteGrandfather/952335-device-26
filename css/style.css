@@ -43,6 +43,7 @@ body {
   line-height: 30px;
   font-weight: 300;
   letter-spacing: 0.14px;
+  vertical-align: bottom;
   color: #464646;
 
   background-color: #ffffff;
@@ -1621,7 +1622,7 @@ width: 714px;
   display: flex;
   justify-content: flex-end;
   height: 100%;
-  padding-top: 82px;
+  padding-top: 70px;
   padding-right: 68px;
 
   background-color: #efefef;
@@ -1648,10 +1649,22 @@ width: 714px;
   border: none;
 }
 
-.filter-form fieldset::before {
+.fieldset-header {
+  position: relative;
+
+  padding-top: 12px;
+}
+
+.cost-header {
+  position: relative;
+  padding-top: 12px;
+}
+
+.filter-form .fieldset-header::before,
+.filter-form .cost-header::before {
   position: absolute;
   content: "";
-  top: -12px;
+  top: 0px;
   left: 0;
 
   width: 200px;
@@ -1673,17 +1686,14 @@ width: 714px;
   color: #464646;
 }
 
-.cost-header{
-  padding-bottom: 34px;
-}
-
 .range-controls {
-  min-height: 56px;
-  padding-top: 1px;
+  position: relative;
+  min-height: 34px;
+  padding-top: 35px;
+  padding-bottom: 10px;
 }
 
 .range-controls .scale {
-  position: relative;
   height: 2px;
 
   background-color: #dbdbdb;
@@ -1691,11 +1701,14 @@ width: 714px;
 
 .toggle {
   position: absolute;
-  top: 49px;
+  top: 25px;
   left: -5px;
 
+  display: block;
   width: 4px;
   height: 4px;
+  padding: 2px;
+  margin: 0;
 
   background-color: #dbdbdb;
   border: 8px solid #ffffff;
@@ -1764,6 +1777,12 @@ width: 714px;
   position: relative;
 
   outline: 0;
+}
+
+.color-checkbox {
+  padding-top: 18px;
+  padding-bottom: 6px;
+  margin: 0;
 }
 
 .color input,
@@ -2035,7 +2054,7 @@ width: 714px;
   width: 255px;
 }
 
-.products-list span {
+.products-list span:not(.small-text) {
   font-family: "Gilroy", Arial, sans-serif;
   font-weight: 300;
   font-size: 16px;
@@ -2046,6 +2065,12 @@ width: 714px;
 
   width: 100px;
   padding-top: 1px;
+}
+
+.small-text {
+  display: inline-block;
+
+  width: 179px;
 }
 
 .compare {
