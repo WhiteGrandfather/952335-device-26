@@ -674,9 +674,6 @@ input[type="radio"].visually-hidden {
   right: 85px;
 }
 
-.slider-radio input {
-}
-
 .slider-label {
   display: inline-block;
   width: 13px;
