@@ -774,9 +774,12 @@ input[type="radio"].visually-hidden {
   background-image: linear-gradient(to bottom, #f0c52e 160px, transparent 160px);
 }
 
-.popular:active::before,
-.popular:active .popular-text {
+.popular:active::before {
   opacity: 0.3;
+}
+
+.popular:active .popular-text {
+  color: rgba(0, 0, 0, 0.3)
 }
 
 .virtual-reality::before {
