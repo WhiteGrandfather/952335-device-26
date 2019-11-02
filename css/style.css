@@ -43,7 +43,6 @@ body {
   line-height: 30px;
   font-weight: 300;
   letter-spacing: 0.14px;
-  vertical-align: bottom;
   color: #464646;
 
   background-color: #ffffff;
@@ -87,14 +86,22 @@ a {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
   position: absolute;
 
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
 
+  white-space: nowrap;
+
+  clip-path: inset(100%);
   clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .list {
@@ -665,7 +672,6 @@ a {
 }
 
 .slider-radio input {
-  display: none;
 }
 
 .slider-controls label {
@@ -673,6 +679,8 @@ a {
   width: 13px;
   height: 13px;
   margin-right: 16px;
+
+  text-align: center;
 
   background-size: 12px;
   background-image: url("../img/slider-button-empty.svg");
@@ -740,8 +748,8 @@ a {
   outline: 0;
 }
 
-.directory-list a:active {
-  opacity: 0.3;
+.popular {
+  background-image: linear-gradient(to bottom, rgba(240, 197, 46, 0.5) 160px, transparent 160px);
 }
 
 .popular:before {
@@ -753,7 +761,6 @@ a {
   width: 160px;
   height: 160px;
 
-  background-color: rgba(240, 197, 46, 0.5);
   background-repeat: no-repeat;
 }
 
@@ -762,42 +769,50 @@ a {
   padding-right: 40px;
 }
 
-.popular:hover:before,
-.popular:focus:before {
-  background-color: #f0c52e;
+.popular:hover,
+.popular:focus {
+  background-image: linear-gradient(to bottom, #f0c52e 160px, transparent 160px);
 }
 
-.virtual-reality:before {
+.popular:active::before {
+  opacity: 0.3;
+}
+
+.popular:active {
+  color: rgba(0, 0, 0, 0.3)
+}
+
+.virtual-reality::before {
   background-image: url("../img/popular-1.svg");
   background-position-x: 31px;
   background-position-y: 52px;
 }
 
-.selfi-monopods:before {
+.selfi-monopods::before {
   background-image: url("../img/popular-2.svg");
   background-position-x: 38px;
   background-position-y: 41px;
 }
 
-.action-cameras:before {
+.action-cameras::before {
   background-image: url("../img/popular-3.svg");
   background-position-x: 49px;
   background-position-y: 38px;
 }
 
-.fitness-bracelets:before {
+.fitness-bracelets::before {
   background-image: url("../img/popular-4.svg");
   background-position-x: 28px;
   background-position-y: 50px;
 }
 
-.smartwatch:before {
+.smartwatch::before {
   background-image: url("../img/popular-5.svg");
   background-position-x: 55px;
   background-position-y: 32px;
 }
 
-.quadcopter:before {
+.quadcopter::before {
   background-image: url("../img/popular-6.svg");
   background-position-x: 13px;
   background-position-y: 49px;
@@ -841,19 +856,27 @@ a {
 }
 
 
-.service-buttons .button:not(.checked):hover,
-.service-buttons .button:not(.checked):focus {
+.service-buttons .button:hover,
+.service-buttons .button:focus {
+  width: 160px;
+  padding-right: 6px;
+
+  color: #000000;
+
   background-image: linear-gradient(to bottom, #f0c52e 0%, #f0c52e 100%);
-  background-size: 160px 40px;
   background-color: transparent;
 }
 
+
 .service-buttons .checked,
 .service-buttons .button:active {
+  width: 100%;
+  padding-right: 122px;
+
   color: #f7e184;
 
-  background-color: #000000;
   background-image: none;
+  background-color: #000000;
 }
 
 .service-popup {
@@ -1319,17 +1342,18 @@ width: 714px;
   transform: translate(-50%, 0);
 }
 
+.map-popup {
+  top: 1853px;
+
+  height: 559px;
+}
+
 .write-us-popup {
   top: 1057px;
 
   padding: 75px 100px;
   width: 760px;
-}
-
-.map-popup {
-  top: 1853px;
-
-  height: 559px;
+  min-height: 403px;
 }
 
 .write-us-form {
@@ -1348,6 +1372,8 @@ width: 714px;
 .write-us-form p:not(.write-us-text) {
   display: inline-block;
   width: 360px;
+
+  vertical-align: bottom;
 }
 
 .write-us-form p:first-child {
@@ -1438,8 +1464,7 @@ width: 714px;
 
 .write-us-form button {
   width: 200px;
-  margin-top: 44px;
-  margin-bottom: 10px;
+  margin-top: 36px;
 }
 
 .form-submission a:hover,
@@ -1583,7 +1608,7 @@ width: 714px;
   flex-grow: 5;
 }
 
-.filter-label,
+.filter-header,
 .catalog-wrapper h2 {
   margin: 0;
 
@@ -1596,7 +1621,7 @@ width: 714px;
   color: #000000;
 }
 
-.filter-label {
+.filter-header {
   display: flex;
   justify-content: flex-end;
   padding-right: 67px;
@@ -1604,7 +1629,7 @@ width: 714px;
   background-color: #dbdbdb;
 }
 
-.filter-label p {
+.filter-header p {
   width: 200px;
   padding-top: 23px;
   padding-bottom: 22px;
@@ -1683,24 +1708,28 @@ width: 714px;
 .range-controls {
   position: relative;
   min-height: 34px;
-  padding-top: 35px;
+  padding-top: 15px;
   padding-bottom: 10px;
 }
 
 .range-controls .scale {
   height: 2px;
+  margin-top: 20px;
 
   background-color: #dbdbdb;
 }
 
-.toggle {
+.toggle-min,
+.toggle-max {
   position: absolute;
   top: 25px;
   left: -5px;
+}
 
+.toggle {
   display: block;
-  width: 4px;
-  height: 4px;
+  width: 10px;
+  height: 10px;
   padding: 2px;
   margin: 0;
 
@@ -1708,14 +1737,13 @@ width: 714px;
   border: 8px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 #cfcfcf;
-  outline: 1px;
-  outline-color: transparent;
   cursor: pointer;
 }
 
 .price-wrapper {
-  position: relative;
-  left: -3px;
+  position: absolute;
+  left: 5px;
+  top: 8px;
 
   display: flex;
   box-sizing: border-box;
@@ -1729,7 +1757,7 @@ width: 714px;
 }
 
 .toggle-max .price-wrapper {
-  left: -25px;
+  left: -18px;
 }
 
 .price-wrapper input {
@@ -1779,11 +1807,6 @@ width: 714px;
   margin: 0;
 }
 
-.color input,
-.bluetooth input{
-  display: none;
-}
-
 .checkbox-label::before {
   position: absolute;
   content: "";
@@ -1812,37 +1835,40 @@ width: 714px;
   background-repeat: no-repeat;
 }
 
-.filter-form label:not(.price):hover,
-.filter-form label:not(.price):focus,
-.filter-form label:not(.price):checked {
-  color: rgba(0, 0, 0, 0.6);
-
+.filter-label {
   cursor: pointer;
 }
 
-.filter-form label:not(.price):active,
-.filter-form label:active::before {
+.filter-input:focus ~ .filter-label,
+.filter-input:focus ~ .filter-label::before ,
+.filter-label:hover,
+.filter-label:checked,
+.filter-label:hover::before {
+  color: rgba(0, 0, 0, 0.6);
+  opacity: 0.6;
+}
+
+.filter-label:active,
+.filter-label:active::before {
   color: #000000;
 
   opacity: 1;
 }
 
-.checkbox input:disabled ~ .checkbox-label,
-.bluetooth input:disabled ~ .radio-label {
-  color: rgba(0, 0, 0, 0.25);
+.filter-input:checked ~ .filter-label {
+  opacity: 1;
 }
 
-.color input:disabled ~ .checkbox-label::before,
-.bluetooth input:disabled ~ .radio-label::before {
+.filter-input:disabled ~ .filter-label {
   opacity: 0.25;
 }
 
-.color input:checked ~ .checkbox-label::before {
+.color .filter-input:checked ~ .checkbox-label::before {
   background-image: url("../img/checkbox-on.svg");
 }
 
 
-.bluetooth input:checked ~ .radio-label::before {
+.bluetooth .filter-input:checked ~ .radio-label::before {
   background-image: url("../img/radio-on.svg");
 }
 
@@ -1979,7 +2005,12 @@ width: 714px;
   display: block;
 }
 
-.products-item:hover {
+.products-button:hover ~.products-image,
+.products-button:focus ~.products-image {
+  opacity: 0.7;
+}
+
+.products-item img:hover {
   opacity: 0.7;
 }
 
@@ -2065,6 +2096,8 @@ width: 714px;
   display: inline-block;
 
   width: 179px;
+
+  vertical-align: bottom;
 }
 
 .compare {

@@ -94,7 +94,7 @@
       </div>
       <div class="catalog-wrapper">
         <div class="filter-wrapper">
-          <div class="filter-label">
+          <div class="filter-header">
             <p>Фильтр:</p>
           </div>
           <div class="form-wrapper">
@@ -105,43 +105,49 @@
                   <div class="range-controls">
                     <div class="scale">
                       <div class="bar" style="width: 60%"></div>
-                      <button class="toggle toggle-min" type="button" name="toggle-min">
-                        <div class="price-wrapper">
-                          <label class="min-price price" for="min-price">от</label>
-                          <input name="min-price" type="text" id="min-price" value="0">
-                        </div>
+                    </div>
+                    <div class="toggle-min">
+                      <button class="toggle" type="button" name="toggle-min">
+                        <span class="visually-hidden">Минимальная цена</span>
                       </button>
-                      <button class="toggle toggle-max" type="button" name="toggle-max">
-                        <div class="price-wrapper">
-                          <label class="max-price price" for="max-price">до</label>
-                          <input name="max-price" type="text" id="max-price" value="8000">
-                        </div>
+                      <div class="price-wrapper">
+                        <label class="min-price price" for="min-price">от</label>
+                        <input name="min-price" type="text" id="min-price" value="0">
                       </div>
-                    </button>
+                    </div>
+                    <div class="toggle-max">
+                      <button class="toggle" type="button" name="toggle-max" >
+                        <span class="visually-hidden">Максимальная цена</span>
+                      </button>
+                      <div class="price-wrapper">
+                        <label class="max-price price" for="max-price">до</label>
+                        <input name="max-price" type="text" id="max-price" value="8000">
+                      </div>
+                    </div>
                   </div>
                 </fieldset>
                 <fieldset class="color">
                   <legend class="fieldset-header">Цвет</legend>
                   <ul class="color-checkbox list">
                     <li>
-                      <input type="checkbox" name="color-checkbox" value="black" id="color-black" checked>
-                      <label class="checkbox-label" for="color-black">Черный</label>
+                      <input class="filter-input visually-hidden" type="checkbox" name="color-checkbox" value="black" id="color-black" checked>
+                      <label class="checkbox-label filter-label" for="color-black">Черный</label>
                     </li>
                     <li>
-                      <input type="checkbox" name="color-checkbox" value="white" id="color-white">
-                      <label class="checkbox-label" for="color-white">Белый</label>
+                      <input class="filter-input visually-hidden" type="checkbox" name="color-checkbox" value="white" id="color-white">
+                      <label class="checkbox-label filter-label" for="color-white">Белый</label>
                     </li>
                     <li>
-                      <input type="checkbox" name="color-checkbox" value="blue" id="color-blue" checked>
-                      <label class="checkbox-label" for="color-blue">Синий</label>
+                      <input class="filter-input visually-hidden" type="checkbox" name="color-checkbox" value="blue" id="color-blue" checked>
+                      <label class="checkbox-label filter-label" for="color-blue">Синий</label>
                     </li>
                     <li>
-                      <input type="checkbox" name="color-checkbox" value="red" id="color-red" checked>
-                      <label class="checkbox-label" for="color-red">Красный</label>
+                      <input class="filter-input visually-hidden" type="checkbox" name="color-checkbox" value="red" id="color-red" checked>
+                      <label class="checkbox-label filter-label" for="color-red">Красный</label>
                     </li>
                     <li>
-                      <input type="checkbox" name="color-checkbox" value="pink" id="color-pink">
-                      <label class="checkbox-label" for="color-pink" >Розовый</label>
+                      <input class="filter-input visually-hidden" type="checkbox" name="color-checkbox" value="pink" id="color-pink">
+                      <label class="checkbox-label filter-label" for="color-pink" >Розовый</label>
                     </li>
                   </ul>
                 </fieldset>
@@ -149,12 +155,12 @@
                   <legend class="fieldset-header">Bluetooth</legend>
                   <ul class="bluetooth-radio list">
                     <li>
-                      <input type="radio" name="radio-bluetooth" value="hev" id="bluetooth-hev" checked>
-                      <label class="radio-label" for="bluetooth-hev">Есть</label>
+                      <input class="filter-input visually-hidden" type="radio" name="radio-bluetooth" value="hev" id="bluetooth-hev" checked>
+                      <label class="radio-label filter-label" for="bluetooth-hev">Есть</label>
                     </li>
                     <li>
-                      <input type="radio" name="radio-bluetooth" value="no" id="bluetooth-no">
-                      <label class="radio-label" for="bluetooth-no">Нет</label>
+                      <input  class="filter-input visually-hidden" type="radio" name="radio-bluetooth" value="no" id="bluetooth-no">
+                      <label class="radio-label filter-label" for="bluetooth-no">Нет</label>
                     </li>
                   </ul>
                 </fieldset>
@@ -195,7 +201,7 @@
             <ul class="products-list list">
               <li>
                 <div class="products-item">
-                  <img src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                  <img class="products-image" src="img/item-1.jpg" width="360" height="380" alt="Любительская селфи-палка">
                   <button class="products-button button" type="button">В корзину</button>
                   <button class="products-compare compare" type="button">Добавить к сравнению</button>
                 </div>
