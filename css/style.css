@@ -460,6 +460,15 @@ input[type="radio"].visually-hidden {
   outline: 0;
 }
 
+.header-block a:hover,
+.header-block a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.header-block a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .enter-link::before {
   position: absolute;
   content: "";
@@ -482,7 +491,7 @@ input[type="radio"].visually-hidden {
   opacity: 0.6;
 }
 
-.user-block a:focus:active {
+.user-block a:active::before {
   opacity: 0.3;
 }
 
@@ -852,7 +861,6 @@ input[type="radio"].visually-hidden {
   padding-left: 2px;
 }
 
-
 .service-buttons .button:hover,
 .service-buttons .button:focus {
   width: 160px;
@@ -863,7 +871,6 @@ input[type="radio"].visually-hidden {
   background-image: linear-gradient(to bottom, #f0c52e 0%, #f0c52e 100%);
   background-color: transparent;
 }
-
 
 .service-buttons .checked,
 .service-buttons .button:active {
@@ -1138,7 +1145,6 @@ background-repeat: no-repeat;
 
 /* Футер верхний блок*/
 
-
 .footer-top {
   display: flex;
   justify-content: space-between;
@@ -1199,18 +1205,17 @@ background-repeat: no-repeat;
   color: rgba(255, 255, 255, 0.7);
 }
 
-.user-link:hover,
-.user-link:focus {
+.footer-user-block .user-link:hover,
+.footer-user-block .user-link:focus {
   color: #ffffff;
 }
-
 
 .user-link:hover svg,
 .user-link:focus svg{
   opacity: 0.6;
 }
 
-.user-link:active {
+.footer-user-block .user-link:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
