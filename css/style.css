@@ -1618,24 +1618,28 @@ background-repeat: no-repeat;
   color: rgba(0, 0, 0, 0.1);
 }
 
-/* Каталог */
+/* Sort */
 
-.catalog-wrapper {
-  display: flex;
-  justify-content: center;
+.catalog-top-wrapper {
   min-width: 1200px;
+  background-image: linear-gradient(to right, #dcdcdc 50%, #ebebeb 50%);
 }
 
-/* Фильтр */
-
-.filter-wrapper {
+.sort-wrapper {
   display: flex;
-  flex-direction: column;
-  flex-grow: 5;
+}
+
+.filter-header{
+  padding-top: 23px;
+  padding-left: 61px;
+  padding-right: 176px;
+  padding-bottom: 22px;
+
+  background-color: #dbdbdb;
 }
 
 .filter-header,
-.catalog-wrapper h2 {
+.sort h2{
   margin: 0;
 
   font-family: "Gilroy", Arial, sans-serif;
@@ -1647,27 +1651,109 @@ background-repeat: no-repeat;
   color: #000000;
 }
 
-.filter-header {
+.catalog-wrapper {
+  background-image: linear-gradient(to right, #efefef 50%, transparent 50%);
+}
+
+.catalog-container {
   display: flex;
-  justify-content: flex-end;
-  padding-right: 67px;
-
-  background-color: #dbdbdb;
 }
 
-.filter-header p {
-  width: 200px;
-  padding-top: 23px;
-  padding-bottom: 22px;
+.sort {
+  display: flex;
+  align-items: baseline;
+  padding-left: 73px;
+
+  background-color: #ebebeb;
+}
+
+.sort-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 589px;
+  padding-top: 19px;
+  padding-bottom: 20px;
   margin: 0;
+  margin-left: 20px;
 }
 
+.sort-up {
+  margin-left: auto;
+}
+
+.sort-down {
+  width: 11px;
+  margin-left: 15px;
+}
+
+.sort-list a {
+  min-height: 11px;
+  min-width: 11px;
+  margin-left: 30px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.3);
+
+  outline: 0;
+}
+
+.sort-arrow a {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin: 0;
+
+  background-repeat: no-repeat;
+  background-position: 0;
+  opacity: 0.3;
+}
+
+.sort-up a {
+  background-image: url("../img/icon-up-dir.svg");
+}
+
+.sort-down a {
+  background-image: url("../img/icon-down-dir.svg");
+}
+
+.sort-up a:hover,
+.sort-down a:hover,
+.sort-up a:focus,
+.sort-down a:focus {
+  opacity: 0.6;
+}
+
+.sort-up a:active,
+.sort-down a:active {
+  opacity: 1;
+}
+
+.sort-list a:hover,
+.sort-list a:focus {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.sort-up a:active,
+.sort-down a:active,
+.sort-list a:active,
+.sort-list .active,
+.sort-up .active,
+.sort-down .active {
+  color: #000000;
+  opacity: 1;
+}
+
+/* Фильтр и каталог */
 
 .form-wrapper {
   display: flex;
   justify-content: flex-end;
   height: 100%;
   padding-top: 70px;
+  padding-left: 60px;
   padding-right: 68px;
 
   background-color: #efefef;
@@ -1737,6 +1823,7 @@ background-repeat: no-repeat;
 
 .range-controls {
   position: relative;
+
   min-height: 34px;
   padding-top: 15px;
   padding-bottom: 10px;
@@ -1911,110 +1998,14 @@ background-repeat: no-repeat;
   padding-left: 3px;
 }
 
-/* Sort */
-
-.catalog-container {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 4.3;
-}
-
-.sort-wrapper {
-  padding-left: 74px;
-
-  background-color: #ebebeb;
-}
-
-.sort {
-  display: flex;
-  align-items: baseline;
-}
-
-.sort-list {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 589px;
-  padding-top: 19px;
-  padding-bottom: 20px;
-  margin: 0;
-  margin-left: 20px;
-}
-
-.sort-up {
-  margin-left: auto;
-}
-
-.sort-down {
-  width: 11px;
-  margin-left: 15px;
-}
-
-.sort-list a {
-  min-height: 11px;
-  min-width: 11px;
-  margin-left: 30px;
-
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(0, 0, 0, 0.3);
-
-  outline: 0;
-}
-
-.sort-arrow a {
-  display: block;
-  width: 15px;
-  height: 15px;
-  margin: 0;
-
-  background-repeat: no-repeat;
-  background-position: 0;
-  opacity: 0.3;
-}
-
-.sort-up a {
-  background-image: url("../img/icon-up-dir.svg");
-}
-
-.sort-down a {
-  background-image: url("../img/icon-down-dir.svg");
-}
-
-.sort-up a:hover,
-.sort-down a:hover,
-.sort-up a:focus,
-.sort-down a:focus {
-  opacity: 0.6;
-}
-
-.sort-up a:active,
-.sort-down a:active {
-  opacity: 1;
-}
-
-.sort-list a:hover,
-.sort-list a:focus {
-  color: rgba(0, 0, 0, 0.6);
-}
-
-.sort-up a:active,
-.sort-down a:active,
-.sort-list a:active,
-.sort-list .active,
-.sort-up .active,
-.sort-down .active {
-  color: #000000;
-  opacity: 1;
-}
-
 /* Каталог товаров*/
 
 .products {
   width: 760px;
-  margin-top: 60px;
-  margin-left: 74px;
+  padding-top: 60px;
+  padding-left: 74px;
+
+  background-color: #ffffff;
 }
 
 .products-list {

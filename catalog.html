@@ -86,11 +86,37 @@
           </li>
         </ul>
       </div>
-      <div class="catalog-wrapper">
-        <div class="filter-wrapper">
-          <div class="filter-header">
-            <p>Фильтр:</p>
+      <div class="catalog-top-wrapper">
+        <div class="sort-wrapper container">
+          <p class="filter-header">Фильтр:</p>
+          <div class="sort">
+            <h2>Сортировка:</h2>
+            <ul class="sort-list list">
+              <li>
+                <a class="active" href="">По цене</a>
+              </li>
+              <li>
+                <a href="">По типу</a>
+              </li>
+              <li>
+                <a href="">По популярности</a>
+              </li>
+              <li class="sort-up sort-arrow">
+                <a href="">
+                  <span class="visually-hidden">Сортировака по возрастанию</span>
+                </a>
+              </li>
+              <li class="sort-down sort-arrow">
+                <a class="active" href="">
+                  <span class="visually-hidden">Сортировака по убыванию</span>
+                </a>
+              </li>
+            </ul>
           </div>
+        </div>
+      </div>
+      <div class="catalog-wrapper">
+        <div class="catalog-container container">
           <div class="form-wrapper">
             <div class="filter-form">
               <form action="https://echo.htmlacademy.ru" method="get">
@@ -160,34 +186,6 @@
                 </fieldset>
                 <button class="button" type="submit">Показать</button>
               </form>
-            </div>
-          </div>
-        </div>
-        <div class="catalog-container">
-          <div class="sort-wrapper">
-            <div class="sort">
-              <h2>Сортировка:</h2>
-              <ul class="sort-list list">
-                <li>
-                  <a class="active" href="">По цене</a>
-                </li>
-                <li>
-                  <a href="">По типу</a>
-                </li>
-                <li>
-                  <a href="">По популярности</a>
-                </li>
-                <li class="sort-up sort-arrow">
-                  <a href="">
-                    <span class="visually-hidden">Сортировака по возрастанию</span>
-                  </a>
-                </li>
-                <li class="sort-down sort-arrow">
-                  <a class="active" href="">
-                    <span class="visually-hidden">Сортировака по убыванию</span>
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
           <section class="products">
