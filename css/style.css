@@ -1630,6 +1630,7 @@ background-repeat: no-repeat;
 }
 
 .filter-header{
+  width: 90px;
   padding-top: 23px;
   padding-left: 61px;
   padding-right: 176px;
